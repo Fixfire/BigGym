@@ -1,0 +1,31 @@
+#mainDiv {
+    border: none;
+    background-color: #1E3D5C;
+    width: 100%;
+    height: 50px; 
+    margin: 0;
+}
+
+
+header {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    margin: 0;
+    border: none;
+}
+
+div {
+    border:none;
+    
+}
+
+
+#centralDiv {
+    background-color: #1E3D5C;
+    height: 1000px;
+    width: 100%;
+}
