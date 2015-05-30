@@ -1,8 +1,14 @@
 <?php
-    $conn = mysqli_connect("localhost","bigbiggym","");
-	mysqli_select_db($conn,"my_bigbiggym"); 
-        if (mysqli_connect_errno()){ //verify connection
-             echo "Error to connecto to DBMS: ".mysqli_connect_error(); // notify error
-               exit();
-        }
+   
+    //connection to db
+    $mysqli = new mysqli("localhost", "bigbiggym", "", "my_bigbiggym");
+
+    if (mysqli_connect_errno()) { //verify connection
+        echo "Error to connect to DBMS: ".mysqli_connect_error(); //notify error
+        exit(); //do nothing else 
+    }
+    else {
+        //echo "Successful connection"; // connection ok
+    }
+
 ?>
