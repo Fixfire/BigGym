@@ -18,7 +18,7 @@ function loadMoreClicked(){
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "../../server/server.php", //Relative or absolute path to file.php file
-        data: {instructor:id},
+        data: {id:id},
         success: function(response) {
             console.log(JSON.parse(response));
             var instructors=JSON.parse(response);
