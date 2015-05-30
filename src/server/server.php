@@ -1,8 +1,9 @@
 <?php
     include 'db_connector.php';
 
+    $id=$_POST["id"];
     # extract results mysqli_result::fetch_array
-    $query = "SELECT * FROM instructor WHERE Id=1";
+    $query = "SELECT * FROM instructor WHERE Id=".$id;
     //query execution
     $result = $mysqli->query($query);
     //if there are data available
