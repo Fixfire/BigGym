@@ -22,6 +22,7 @@ header {
 #centralDiv {
     background-color: #1E3D5C;
     width: 100%;
+    
 }
 
 
@@ -103,14 +104,13 @@ header {
 }
 
 
-
-
-
-#homeText {
+.centralText {
+    padding-top: 1%;
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 2%;
+    
 }
+
 
 #leftHomeText {
     text-align: right;
