@@ -4,6 +4,7 @@ body {
     padding: 0;
     min-width: 1024px;
     min-height: 50px;
+    color: #F5F2FF;
 }
 
 
@@ -20,15 +21,13 @@ header {
 }
 #centralDiv {
     background-color: #1E3D5C;
-    height: 1000px;
     width: 100%;
 }
 
 
 .dropdown-menu:nth-child(n)  {
     background-color: #222; 
-    color: aqua;
-    
+    color: #9d9d9d;    
 }
 
 
@@ -36,3 +35,111 @@ header {
     color: #9d9d9d;
 }
 
+.hdButton {
+    color: #9d9d9d;
+}
+
+.hdButton:hover{
+    color:black;
+}
+
+#hdButton8 {
+    postion:absolute; 
+    top:-275px; 
+    left:15px;
+    width: 160px;
+    color: #9d9d9d;
+}
+
+#hdButton7 {
+    postion:absolute; 
+    top:-235px; 
+    right: 90px;
+    width: 105px;
+}
+
+#hdButton6 {
+    postion:absolute; 
+    top:-195px; 
+    right:160px;
+    width: 70px;
+}
+
+#hdButton5 {
+    postion:absolute; 
+    top:-155px; 
+    right:300px;
+    width: 140px;
+}
+
+#hdButton4 {
+    postion:absolute; 
+    top:-115px; 
+    right:400px;
+    width: 100px;
+    
+}
+
+#hdButton3 {
+    postion:absolute; 
+    top:-75px; 
+    right:530px;
+    width: 130px;
+}
+
+#hdButton2 {
+    postion:absolute; 
+    top:-35px; 
+    right:640px;
+    width: 110px;
+}
+
+#hdButton1 {
+    postion:absolute; 
+    top:5px; 
+    right:730px;
+    width: 90px;
+
+}
+
+
+
+
+
+#homeText {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+}
+
+#leftHomeText {
+    text-align: right;
+    padding-left: 12%;
+    padding-top: 3%;
+}
+
+#centerHomeText {
+    text-align: center;
+    padding-top: 3%;
+}
+
+
+
+#rights {
+    position: relative;
+    top: 30px;
+    left: 50%;
+}
+
+footer {
+    padding-left: 5px;
+    background-color: #1E3D5C;
+    margin-top: -20px;
+    height: 100px;
+    font-size: 10px;
+    
+}
+
+footer:nth-child(n) p{
+    position: relative;
+    top: 55px;
