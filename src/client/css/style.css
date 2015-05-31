@@ -129,6 +129,7 @@ header {
     position: relative;
     top: 30px;
     left: 50%;
+    width: 100px;
 }
 
 footer {
