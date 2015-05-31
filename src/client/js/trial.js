@@ -23,7 +23,7 @@ function getAllInstructors(){
                 //$(".contents").html(" "+instructors[i].Name);
                 el+="<div class='instructor' id='"+instructors[i].Id+"'><h2>"+instructors[i].Name+"</h2>  <span>"+instructors[i].Surname+"</span><a href='instructor.html?instr="+instructors[i].Id+"' class='loadmore' id='"+instructors[i].Id+"'>Load more</a></div>";
             }
-            $("body").html(el);
+            $(".content").html(el);
         1},
         error: function(request,error) 
         {
