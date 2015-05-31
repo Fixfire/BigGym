@@ -11,14 +11,14 @@
       
     <!-- Local references -->
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    
  
     <title>Home Page</title>
   </head>
     
   <body>
-    <header  >      
-        <div>
-            <nav class="navbar navbar-inverse">
+     <header class="allWidth">      
+            <nav class="navbar navbar-inverse allWidth"  >
                  <div class="container-fluid" >
                     <div class="navbar-header">  
                         <a class="navbar-brand" href="index.html">
@@ -26,51 +26,39 @@
                         </a>
                     </div>
 
-                    <ul class="nav navbar-nav navbar-right" >
-                        <li><a href="#">Our Gym</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Instructors<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu" >
-                                <li><a href="#" >Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
+                    <ul class="nav"  style="position:absolute; right: 14px; top:0%;" >
+                        <li ><a href="#" class="hdButton" id="hdButton1">Our Gym</a></li>
+                       <li class="dropdown hdButton" id="hdButton2" >
+                            <a href="#" class="dropdown-toggle hdButton" data-toggle="dropdown" role="button" aria-expanded="false">Instructors<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="instructor.html">All instructors</a></li>
+                                <li><a href="#">Instructors of hte months</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Our Equipment</a></li>
-                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Courses<span class="caret"></span></a>
+                        <li  id="hdButton3" ><a href="#" class="hdButton">Our Equipment</a></li>
+                         <li class="dropdown" id="hdButton4"  >
+                            <a href="#" class="dropdown-toggle hdButton" data-toggle="dropdown" role="button" aria-expanded="false">Courses<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
+                                <li><a href="courses.html">All courses</a></li>
+                                <li><a href="#">All course category</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Overall Schedule</a></li>
-                        <li><a href="#">Rooms</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Fees and Location<span class="caret"></span></a>
+                        <li id="hdButton5" ><a href="#" class="hdButton">Overall Schedule</a></li>
+                        <li class="hdButton" id="hdButton6" ><a href="#" class="hdButton">Rooms</a></li>
+                        <li class="hdButton" id="hdButton7" ><a href="#" class="hdButton">Testimonials</a></li>
+                        <li class="dropdown" id="hdButton8" >
+                            <a href="#" class="dropdown-toggle hdButton" data-toggle="dropdown" role="button" aria-expanded="false">Fees and Location<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
+                                <li><a href="location.html">Location</a></li>
+                                <li><a href="ourrates.html">Fees & Registration</a></li>
                             </ul>
                         </li>
                         <li><span class="caret"></span>
                         </li>
                         
-                       
                     </ul>
                 </div>
-
             </nav>
-        </div>
-    </header>
+        </header>
       
 </html>
