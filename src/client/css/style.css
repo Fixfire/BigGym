@@ -160,3 +160,24 @@ html {
     height: 60px;
     
 }
+
+
+
+#courseDetail {
+    width: 230px;
+    height: 130px;
+}
+
+
+
+#container {
+    width: 100%;
+
+    padding-right: 0;
+
+}
+
+#courseBlock {
+    width: 300px;
+    height: 480px;
+}
