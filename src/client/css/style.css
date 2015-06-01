@@ -181,3 +181,30 @@ html {
     width: 300px;
     height: 480px;
 }
+
+#pagination {
+    position: sticky;
+    left: 0px;
+    top 300px;
+    font-size: 10px;
+}
+
+#pagination:nth-child(n) li {
+    list-style-type: none;
+    position: relative;
+    right: 20px;
+    overflow: visible;
+}
+
+
+
+
+
+
+
+
+#link {
+    position: relative;
+    left: 89.7%;
+    
+}
