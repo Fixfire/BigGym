@@ -43,6 +43,15 @@ header {
     color:black;
 }
 
+.submitButton {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #66FF99;
+    text-decoration: underline;
+    cursor: pointer; 
+}
+
 #hdButton8 {
     postion:absolute; 
     top:-275px; 
