@@ -56,7 +56,7 @@ function loadCoursesAlphabet(){
                 el += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
                 el += "<h3>" + courses[i].Name + "</h3>";
                 el += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
-                el += "<p>Category : " + courses[i].Category.Name + "</p>";
+                el += "<p>Category : " + courses[i].Category + "</p>";
                 el += "<p>Level : " + courses[i].Level + "</p>";
                 el += "<button class='btn' type='button' id='std-btn'></button>";
                 el += "</div>";
