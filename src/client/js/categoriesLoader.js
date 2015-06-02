@@ -34,7 +34,7 @@ function loadCategories(){
                 el += "<img src='images/" + path + "/main.jpg' height='200' width='200' style='float:right;'/>";
                 el += "<p>" + categories[i].ShortDescription + "</p>";
                 el += "<button class='btn category-btn1' type='button' id='std-btn' >More Info</button>";
-                el += "<button class='btn category-btn2' type='button' id='std-btn' >Courses</button>";
+                el += "<button class='btn category-btn2' type='button' id='std-btn' onclick=\"parent.location='coursesbycategory.html?cat=" + categories[i].Name + "'\" >Courses</button>";
                 el += "</div> </div>";
             }
            
