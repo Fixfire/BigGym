@@ -208,3 +208,45 @@ html {
     left: 89.7%;
     
 }
+
+#category {
+    font-size: 13px;
+    height: 300px
+}
+
+#categoryList {
+    padding-top: 10px;
+}
+
+#std-btn {
+    background-color: #222222;
+    color: white;
+}
+
+#std-btn:selected {
+    background-color: #222222;
+    color: white;
+}
+
+#std-btn:hover  {
+    background-color: #EEEEEE;
+    color: black;
+
+}
+
+#categoryContainer {
+    position: relative;
+    bottom: 15px;
+    
+}
+
+.category-btn1 {
+    margin-top: 5.5%;
+    margin-left: 50%;
+}
+
+
+.category-btn2 {
+    margin-top: 5.5%;
+    margin-left: 15px;
+}
