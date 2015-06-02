@@ -250,3 +250,17 @@ html {
     margin-top: 5.5%;
     margin-left: 15px;
 }
+
+
+
+#context {
+    padding-top: 10px;
+
+    
+}
+
+#context:nth-child(n) span {
+    position:relative;
+    top: 2px;
+    font-size: 20px;    
+}
