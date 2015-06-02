@@ -160,3 +160,93 @@ html {
     height: 60px;
     
 }
+
+
+
+#courseDetail {
+    width: 230px;
+    height: 130px;
+}
+
+
+
+#container {
+    width: 100%;
+
+    padding-right: 0;
+
+}
+
+#courseBlock {
+    width: 300px;
+    height: 480px;
+}
+
+#pagination {
+    position: sticky;
+    left: 0px;
+    top 300px;
+    font-size: 10px;
+}
+
+#pagination:nth-child(n) li {
+    list-style-type: none;
+    position: relative;
+    right: 20px;
+    overflow: visible;
+}
+
+
+
+
+
+
+
+
+#link {
+    position: relative;
+    left: 89.7%;
+    
+}
+
+#category {
+    font-size: 13px;
+    height: 300px
+}
+
+#categoryList {
+    padding-top: 10px;
+}
+
+#std-btn {
+    background-color: #222222;
+    color: white;
+}
+
+#std-btn:selected {
+    background-color: #222222;
+    color: white;
+}
+
+#std-btn:hover  {
+    background-color: #EEEEEE;
+    color: black;
+
+}
+
+#categoryContainer {
+    position: relative;
+    bottom: 15px;
+    
+}
+
+.category-btn1 {
+    margin-top: 5.5%;
+    margin-left: 50%;
+}
+
+
+.category-btn2 {
+    margin-top: 5.5%;
+    margin-left: 15px;
+}
