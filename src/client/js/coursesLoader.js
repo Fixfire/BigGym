@@ -3,24 +3,24 @@ $(document).ready(documentReady);
 var ordering;
 function documentReady(){
     console.log("I'm ready");
-    ordering = "alphabet";
+    ordering = "level";
     createLink();
     loadCoursesAlphabet();
 }
 
 
 function createLink() {
-    $("#link").html("Ordered by " + ordering);
+    $("#link").html("Order by " + ordering);
 }
 
 
 function reorder() {
     if (ordering == "level") {
         ordering = "alphabet";
-        loadCoursesAlphabet();
+        loadCoursesLevel();
     } else {
         ordering = "level";
-        loadCoursesLevel();
+        loadCoursesAlphabet();
     }
     createLink();
 }
@@ -56,9 +56,9 @@ function loadCoursesAlphabet(){
                 el += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
                 el += "<h3>" + courses[i].Name + "</h3>";
                 el += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
-                el += "<p>Category:" + courses[i].Category.Name + "</p>";
-                el += "<p>Level:" + courses[i].Target + "</p>";
-                el += "<button></button>";
+                el += "<p>Category : " + courses[i].Category.Name + "</p>";
+                el += "<p>Level : " + courses[i].Level + "</p>";
+                el += "<button class='btn' type='button' id='std-btn'></button>";
                 el += "</div>";
             }
             el += "</div>";
@@ -103,8 +103,8 @@ function loadCoursesLevel(){
                 advanced += "<h3>" + courses[i].Name + "</h3>";
                 advanced += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
                 advanced += "<p>Category:" + courses[i].Category.Name + "</p>";
-                advanced += "<p>Level:" + courses[i].Target + "</p>";
-                advanced += "<button></button>";
+                advanced += "<p>Level:" + courses[i].Level + "</p>";
+                advanced += "<button class='btn' type='button' id='std-btn'></button>";
                 advanced += "</div>";
             }
             
@@ -124,13 +124,13 @@ function loadCoursesLevel(){
                 beginner += "<h3>" + courses[i].Name + "</h3>";
                 beginner += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
                 beginner += "<p>Category:" + courses[i].Category.Name + "</p>";
-                beginner += "<p>Level:" + courses[i].Target + "</p>";
-                beginner += "<button></button>";
+                beginner += "<p>Level:" + courses[i].Level + "</p>";
+                beginner += "<button class='btn' type='button' id='std-btn'></button>";
                 beginner += "</div>";
             }
             
             if (beginner != "") {
-                beginner = "<h3>Beginner</h3> <hr> <div class='row'>" + advanced; 
+                beginner = "<h3>Beginner</h3> <hr> <div class='row'>" + beginner; 
                 beginner += "</div>";
             }
             
@@ -146,13 +146,13 @@ function loadCoursesLevel(){
                 intermediate += "<h3>" + courses[i].Name + "</h3>";
                 intermediate += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
                 intermediate += "<p>Category:" + courses[i].Category.Name + "</p>";
-                intermediate += "<p>Level:" + courses[i].Target + "</p>";
-                intermediate += "<button></button>";
+                intermediate += "<p>Level:" + courses[i].Level + "</p>";
+                intermediate += "<button class='btn' type='button' id='std-btn'></button>";
                 intermediate += "</div>";
             }
             
-             if (advanced != "") {
-                intermediate = "<h3>Advanced</h3> <hr> <div class='row'>" + advanced; 
+             if (intermediate != "") {
+                intermediate = "<h3>Intermediate</h3> <hr> <div class='row'>" + intermediate; 
                 intermediate += "</div>";
             }
  
