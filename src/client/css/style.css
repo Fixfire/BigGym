@@ -240,7 +240,7 @@ html {
     
 }
 
-.category-btn1 {
+.category-btn1, .instructor-btn {
     margin-top: 5.5%;
     margin-left: 50%;
 }
@@ -263,6 +263,11 @@ html {
     position:relative;
     top: 2px;
     font-size: 20px;    
+}
+
+#instructorList {
+    padding-top:  10px;
+    font-size: 10px;
 }
 
 #map-canvas { 
