@@ -39,10 +39,10 @@ function loadInstructors(){
                 el += "<div id='instructorContainer'>";
                 el += "<p>" + instructors[i].Position + "</p>";
                 el += "<p>" + instructors[i].Certifications + "</p>";
-                el += "<button class='btn category-btn1' type='button' id='std-btn'                 onclick=\"parent.location='instructor.html?instr=" + instructors[i].Id + "'\" >More Info</button>";
+                el += "<button class='btn instructor-btn' type='button' id='std-btn'                 onclick=\"parent.location='instructor.html?instr=" + instructors[i].Id + "'\" >More Info</button>";
                 el += "</div> </div>";
             }
-            $("#instructorsList").html(el);
+            $("#container").html(el);
         1},
         error: function(request,error) 
         {
