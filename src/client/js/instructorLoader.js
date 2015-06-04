@@ -1,7 +1,6 @@
 $(document).ready(documentReady);
 
 function documentReady(){
-    console.log("I'm ready");
     var id=getUrlVars()["instr"];
     var from=getUrlVars()["from"];
     loadInstructor(id,from);
@@ -20,7 +19,6 @@ function createContext(from,el,instructors){
 
 function loadInstructor(id,from){
 
-    console.log("Loading instructotrs"+id.toString());
     var categoriesList;
     var hasAwards;
     
@@ -32,7 +30,6 @@ function loadInstructor(id,from){
         url: "../../server/getInstructorCategories.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
-            console.log(JSON.parse(response));
             categoriesList=JSON.parse(response);
         1},
     });
@@ -45,10 +42,8 @@ function loadInstructor(id,from){
         url: "../../server/hasAwards.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
-            console.log(JSON.parse(response));
             var result=JSON.parse(response);
             hasAwards=result['boolean'];
-            console.log(hasAwards);
         1},
     });
     
@@ -59,7 +54,6 @@ function loadInstructor(id,from){
         url: "../../server/server.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
-            console.log(JSON.parse(response));
             var instructors=JSON.parse(response);
             var el="";
             var el2="";
@@ -67,7 +61,6 @@ function loadInstructor(id,from){
             createContext(from,el,instructors);
             el="";
             for(var i=0;i<instructors.length;i++){
-                console.log(instructors[i].Name);
                 document.title=instructors[i].Name+" "+instructors[i].Surname;
                 //$(".contents").html(" "+instructors[i].Name);
                 el+=instructors[i].Name+" "+instructors[i].Surname;
@@ -81,7 +74,6 @@ function loadInstructor(id,from){
                 el2+="<h4>Categories of activity:</h4>";
                 el2+="<div class='categoriesTeaching'>";
                 //var categoriesList=loadCategories(id);
-                console.log(categoriesList);
                 for(var j=0;j<categoriesList.length;j++){
                      el2+="<a href='#'>"+categoriesList[j].Category+"</a><br>";
                 }

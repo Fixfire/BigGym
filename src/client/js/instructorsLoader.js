@@ -1,12 +1,10 @@
 $(document).ready(documentReady);
 
 function documentReady(){
-    console.log("I'm ready");
     loadInstructors();
 }
 
 function loadInstructors(){
-    console.log("Loading all instructotrs...");
     
     $.ajax({
         method: "POST",
@@ -15,7 +13,6 @@ function loadInstructors(){
         url: "../../server/getAllInstructors.php", //Relative or absolute path to file.php file
         //data: {instructor:id},
         success: function(response) {
-            console.log(JSON.parse(response));
             var instructors=JSON.parse(response);
             var el="";
             var currentLetter = '';
@@ -30,7 +27,6 @@ function loadInstructors(){
                     el += "<h3>" + currentLetter + "</h3> <hr>"; 
                     el += "<div class='row'>";
                 }
-                console.log(instructors[i].Name);
                 el += "<div class='col-md-6' id='instructorBlock'>";
                 el += "<img src='images/Instructors/" + instructors[i].Name+instructors[i].Surname + ".jpg' height='140' width='110' style='float:left; padding-right: 10px'/>";
                 el+= "<div class='instructorContainer'>";
@@ -43,7 +39,6 @@ function loadInstructors(){
                 el += "</div> </div>";
             }
             $("#container").html(el);
-            console.log(el);
         1},
         error: function(request,error) 
         {
