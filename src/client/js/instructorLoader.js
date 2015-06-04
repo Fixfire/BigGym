@@ -22,6 +22,7 @@ function loadInstructor(id,from){
 
     console.log("Loading instructotrs"+id.toString());
     var categoriesList;
+    var hasAwards;
     
     $.ajax({
         method: "POST",
@@ -33,6 +34,21 @@ function loadInstructor(id,from){
         success: function(response) {
             console.log(JSON.parse(response));
             categoriesList=JSON.parse(response);
+        1},
+    });
+    
+    $.ajax({
+        method: "POST",
+        async:false,
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "../../server/hasAwards.php", //Relative or absolute path to file.php file
+        data: {id:id},
+        success: function(response) {
+            console.log(JSON.parse(response));
+            var result=JSON.parse(response);
+            hasAwards=result['boolean'];
+            console.log(hasAwards);
         1},
     });
     
@@ -59,7 +75,9 @@ function loadInstructor(id,from){
                 el2+="<h4 class='instructorPositionTitle'>"+instructors[i].Position+"</h4>";
                 el2+="<h4 class='instructorCertTitle'>"+instructors[i].Certifications+"</h4>";
                 el2+="<p id='biography'>"+instructors[i].Biography+"</p>";
-                el2+="<a href='#' class='hlink'>Personal Awards</a>";
+                if(hasAwards){
+                    el2+="<a href='#' class='hlink'>Personal Awards</a>";
+                }
                 el2+="<h4>Categories of activity:</h4>";
                 el2+="<div class='categoriesTeaching'>";
                 //var categoriesList=loadCategories(id);
