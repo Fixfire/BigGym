@@ -18,6 +18,22 @@ function createContext(from,el,instructors){
      $("#context").html(el);
 }
 
+function loadCategories(id){
+    console.log("Loading categories");
+ $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "../../server/getInstructorCategories.php", //Relative or absolute path to file.php file
+        data: {id:id},
+        success: function(response) {
+            console.log(JSON.parse(response));
+            var categories=JSON.parse(response);
+            return categories;
+        1},
+ });
+}
+
 function loadInstructor(id,from){
 
     console.log("Loading instructotrs"+id.toString());
@@ -32,6 +48,7 @@ function loadInstructor(id,from){
             console.log(JSON.parse(response));
             var instructors=JSON.parse(response);
             var el="";
+            var el2="";
             
             createContext(from,el,instructors);
             el="";
@@ -40,8 +57,22 @@ function loadInstructor(id,from){
                 document.title=instructors[i].Name+" "+instructors[i].Surname;
                 //$(".contents").html(" "+instructors[i].Name);
                 el+=instructors[i].Name+" "+instructors[i].Surname;
+                el2+="<img src='images/Instructors/"+instructors[i].Name+instructors[i].Surname+".jpg' height='275' width='195' style='float:rigt;padding-left:10px'/>";
+                el2+="<h4 class='instructorPositionTitle'>"+instructors[i].Position+"</h4>";
+                el2+="<h4 class='instructorCertTitle'>"+instructors[i].Certificates+"</h4>";
+                el2+="<p id='biography'"+instructors[i].Biography+"</p>";
+                el2+="<a href='#' class='hlink'>Personal Awards</a>";
+                el2+="<h4>Categories of activity:</h4>";
+                el2+="<div class='categoriesTeaching'>";
+                var categoriesList=loadCategories(id);
+                for(var i=0;i<categoriesList.length;i++){
+                     el2+="<a href='#'>"+categoriesList[i].Name+"</a><br>";
+                }
+                el2+="</div>";
+                el2+="<a href='#' class='hlink'>Course teaching list</a>";
             }
             $("#instructorName").html(el);
+            $("#subtitleDiv").html(el2);
         1},
         error: function(request,error) 
         {
