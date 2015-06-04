@@ -31,7 +31,7 @@ function loadInstructors(){
                     el += "<div class='row'>";
                 }
                 console.log(instructors[i].Name);
-                el += "<div class='col-md-4' id='instructorBlock'>";
+                el += "<div class='col-md-6' id='instructorBlock'>";
                 el += "<img src='images/Instructors/" + instructors[i].Name+instructors[i].Surname + ".jpg' height='140' width='110' style='float:left; padding-right: 10px'/>";
                 el+= "<div class='instructorContainer'>";
                 el += "<h3 class='instructorName'>" + instructors[i].Name + " "+ instructors[i].Surname +"</h3>";
