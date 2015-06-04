@@ -31,18 +31,19 @@ function loadInstructors(){
                     el += "<div class='row'>";
                 }
                 console.log(instructors[i].Name);
-                el += "<div class='col-md-2' id='instructorThumbnail'>";
-                el += "<img src='images/Instructors/" + instructors[i].Name+instructors[i].Surname + ".jpg' height='140' width='100' style='float:right;'/>";
-                el+="</div>";
-                el += "<div class='col-md-2' id='instructorDetails'>";
-                el += "<h3>" + instructors[i].Name + " "+ instructors[i].Surname +"</h3>";
-                el += "<div id='instructorContainer'>";
-                el += "<p>" + instructors[i].Position + "</p>";
+                el += "<div class='col-md-4' class='instructorBlock'>";
+                el += "<img src='images/Instructors/" + instructors[i].Name+instructors[i].Surname + ".jpg' height='140' width='110' style='float:left; padding-right: 10px'/>";
+                el+= "<div class='instructorContainer'>";
+                el += "<h3 class='instructorName'>" + instructors[i].Name + " "+ instructors[i].Surname +"</h3>";
+                el += "<p class='instructorPosition'>" + instructors[i].Position + "</p>";
                 el += "<p>" + instructors[i].Certifications + "</p>";
-                el += "<button class='btn instructor-btn' type='button' id='std-btn'                 onclick=\"parent.location='instructor.html?instr=" + instructors[i].Id + "'\" >More Info</button>";
+                el+="</div>";
+                el+="<div class='instructorBtn'>";
+                el += "<button class='btn' type='button' id='std-btn'                 onclick=\"parent.location='instructor.html?instr=" + instructors[i].Id + "'\" >More Info</button>";
                 el += "</div> </div>";
             }
             $("#container").html(el);
+            console.log(el);
         1},
         error: function(request,error) 
         {
