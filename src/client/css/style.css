@@ -270,6 +270,10 @@ html {
     font-size: 10px;
 }
 
+#instructorBlock {
+    height: 150px;
+}
+
 .instructorContainer {
     height:100px
 }
@@ -289,4 +293,17 @@ html {
 #map-canvas { 
     width: 50%; 
     height: 50%; 
+}
+
+.hlink {
+    font-size: 19px;
+}
+
+#biography {
+    height: 190px;
+}
+
+a{
+    <!--underlined -->
+    color: #66FF99;
 }
