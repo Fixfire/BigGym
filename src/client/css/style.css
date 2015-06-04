@@ -101,6 +101,15 @@ header {
 
 }
 
+.submitButton {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #66FF99;
+    text-decoration: underline;
+    cursor: pointer; 
+}
+
 
 .centralText {
     padding-left: 5%;
@@ -272,6 +281,7 @@ html {
 
 #instructorBlock {
     height: 150px;
+    margin-bottom: 10px;
 }
 
 .instructorContainer {
@@ -304,6 +314,6 @@ html {
 }
 
 a{
-    <!--underlined -->
     color: #66FF99;
+    
 }
