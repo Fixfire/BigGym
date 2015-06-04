@@ -56,8 +56,8 @@ function loadCoursesAlphabet(){
                 el += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
                 el += "<h3>" + courses[i].Name + "</h3>";
                 el += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
-                el += "<p>Category : " + courses[i].Category + "</p>";
-                el += "<p>Level : " + courses[i].Level + "</p>";
+                el += "<p>Category: " + courses[i].Category + "</p>";
+                el += "<p>Level: " + courses[i].Level + "</p>";
                 el += "<button class='btn' type='button' id='std-btn'></button>";
                 el += "</div>";
             }
@@ -102,8 +102,8 @@ function loadCoursesLevel(){
                 advanced += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
                 advanced += "<h3>" + courses[i].Name + "</h3>";
                 advanced += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
-                advanced += "<p>Category:" + courses[i].Category.Name + "</p>";
-                advanced += "<p>Level:" + courses[i].Level + "</p>";
+                advanced += "<p>Category: " + courses[i].Category + "</p>";
+                advanced += "<p>Level: " + courses[i].Level + "</p>";
                 advanced += "<button class='btn' type='button' id='std-btn'></button>";
                 advanced += "</div>";
             }
@@ -123,8 +123,8 @@ function loadCoursesLevel(){
                 beginner += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
                 beginner += "<h3>" + courses[i].Name + "</h3>";
                 beginner += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
-                beginner += "<p>Category:" + courses[i].Category.Name + "</p>";
-                beginner += "<p>Level:" + courses[i].Level + "</p>";
+                beginner += "<p>Category: " + courses[i].Category + "</p>";
+                beginner += "<p>Level: " + courses[i].Level + "</p>";
                 beginner += "<button class='btn' type='button' id='std-btn'></button>";
                 beginner += "</div>";
             }
@@ -145,8 +145,8 @@ function loadCoursesLevel(){
                 intermediate += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
                 intermediate += "<h3>" + courses[i].Name + "</h3>";
                 intermediate += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
-                intermediate += "<p>Category:" + courses[i].Category.Name + "</p>";
-                intermediate += "<p>Level:" + courses[i].Level + "</p>";
+                intermediate += "<p>Category: " + courses[i].Category + "</p>";
+                intermediate += "<p>Level: " + courses[i].Level + "</p>";
                 intermediate += "<button class='btn' type='button' id='std-btn'></button>";
                 intermediate += "</div>";
             }
