@@ -1,9 +1,20 @@
 $(document).ready(documentReady);
 
 function documentReady(){
+    //Facebook script setup
+    $.ajaxSetup({ cache: true });
+    $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+        FB.init({
+          appId: '1677221109163837',
+        xfbml      : true,
+          version: 'v2.3' // or v2.0, v2.1, v2.0
+        });     
+        $('#loginbutton,#feedbutton').removeAttr('disabled');
+    });
+
     var id=getUrlVars()["instr"];
     var from=getUrlVars()["from"];
-    loadInstructor(id,from);
+    loadInstructor(id,from); 
 }
 
 
