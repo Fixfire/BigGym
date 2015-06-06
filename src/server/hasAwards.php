@@ -1,19 +1,20 @@
 <?php
     include 'db_connector.php';
 
+    $id=$_POST["id"];
     # extract results mysqli_result::fetch_array
-    $query = "SELECT * FROM instructor ORDER BY Surname";
+    $query = "SELECT * FROM awards WHERE Id_Instructor=".$id;
     //query execution
     $result = $mysqli->query($query);
     //if there are data available
     if($result->num_rows >0)
     {
-        $myArray = array();//create an array
-        while($row = $result->fetch_array(MYSQL_ASSOC)) {
-            $myArray[] = array_map('utf8_encode', $row);	
-        }
-        echo json_encode($myArray);
+        $response = array('boolean' => true);
+    }else{
+        $response = array('boolean' => false);
     }
+    
+    echo json_encode($response);
 
     //free result
     $result->close();

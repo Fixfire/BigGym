@@ -1,8 +1,9 @@
 <?php
     include 'db_connector.php';
 
+    $id=$_POST["id"];
     # extract results mysqli_result::fetch_array
-    $query = "SELECT * FROM instructor ORDER BY Surname";
+    $query = "SELECT Category FROM staff WHERE Instructor=".$id." ORDER BY Category"; //Binding??
     //query execution
     $result = $mysqli->query($query);
     //if there are data available
