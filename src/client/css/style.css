@@ -264,3 +264,83 @@ html {
     top: 2px;
     font-size: 20px;    
 }
+
+#courseInfo {
+    float: left;
+    padding-left: 20px; 
+    font-size: 13px;
+    border-right-style: solid;
+    border-right-color: #F5F2FF;
+    border-right-width: 2px;
+    padding-left: 10px;
+}
+
+#courseDescription {
+    
+    padding-left: 10%;
+    min-width: 100px;
+    max-width: 57%;
+    min-height: 500px;
+    max-height: 500px;
+    float:left;
+    
+    
+}
+
+#courseRegister {
+    float: left;
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 16px;
+}
+
+#calendar {
+    height: 100px;
+    width: 300px;
+}
+
+#thunbnail {
+    float: right;
+    padding-right: 10px;
+ 
+}
+
+#courseInstructor {
+    height: 200px;
+}
+
+#courseInstructor:nth-child(n) p {
+    height: 100px;
+    width: 245px;
+
+}
+
+#courseImage {
+    float: left;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+#prev {
+    width: 50px;
+    height: 400px;
+    float:left;
+    margin-left: 10px;
+}
+
+#next {
+    width: 50px;
+    height: 400px;
+    float:right;
+    margin-right: 10px;
+
+}
+
+.indexButton {
+    margin-top: 350%;
+}
