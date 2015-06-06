@@ -92,7 +92,7 @@ function loadInstructor(id,from){
                 el2+="</div>";
                 el2+="<a href='#' class='hlink'>Course teaching list</a>";
                 if(!instructors[i].TwitterURL==""){
-                el3+="<a class='twitter-timeline'  href='https://twitter.com/"+instructors[i].TwitterURL+"' data-widget-id='"+instructors[i].TwitterID+"' width='400' height='200' data-chrome='nofooter transparent' data-tweet-limit='2'  data-aria-polite='assertive'>Tweets by @"+instructors[i].TwitterName+"</a>";
+                el3+="<a class='twitter-timeline'  href='https://twitter.com/"+instructors[i].TwitterURL+"' data-widget-id='"+instructors[i].TwitterID+"' width='400' height='200' data-chrome='nofooter transparent' data-tweet-limit='2'  data-aria-polite='assertive '>Tweets by @"+instructors[i].TwitterName+"</a>";
                 el3+="<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';                        if(!d.getElementById(id)){js=d.createElement(s);js.id=id;                            js.src=p+'://platform.twitter.com/widgets.js';                            fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');</script>";
                 }
             }

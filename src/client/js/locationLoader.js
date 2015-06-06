@@ -25,14 +25,14 @@ function initialize() {
     });
     
     var mapOptions = {
-        center: new google.maps.LatLng(lat, lng), //37.091 -76.478
+        center: new google.maps.LatLng(37.091, -76.478), //37.091 -76.478
         zoom: 16
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
     
     // Creating a marker and positioning it on the map  
     var marker = new google.maps.Marker({  
-        position: new google.maps.LatLng(lat, lng),  
+        position: new google.maps.LatLng(37.091, -76.478),  
         title: 'Big Gym',
         url: url,
         map: map  
