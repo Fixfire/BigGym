@@ -380,6 +380,7 @@ html {
 #map-canvas { 
     width: 50%; 
     height: 50%; 
+    margin-bottom: 10px;
 }
 
 .hlink {
