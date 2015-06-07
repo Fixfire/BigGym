@@ -11,7 +11,7 @@ function documentReady(){
 
 function loadCoursesCategories(category){
 
-    console.log("Loading courses" + category.toString());
+    console.log("Loading courses " + category.toString());
     
     document.title="All courses by categories";
     
@@ -40,7 +40,7 @@ function loadCoursesCategories(category){
                 el += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
                 el += "<p>Category: " + courses[i].Category + "</p>";
                 el += "<p>Level: " + courses[i].Level + "</p>";
-                el += "<button class='btn' type='button' id='std-btn'></button>";
+                el += "<button class='btn' type='button' id='std-btn' onclick=\"parent.location='course.html?name=" + courses[i].Name + "'\">More Info</button>";
                 el += "</div>";
             }
             el += "</div>";
