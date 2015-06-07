@@ -73,35 +73,30 @@ function loadInstructor(id,from){
             createContext(from,el,instructors);
             el="";
             for(var i=0;i<instructors.length;i++){
+                //Set the document title
                 document.title=instructors[i].Name+" "+instructors[i].Surname;
+                //Fill instructor name
                 el+=instructors[i].Name+" "+instructors[i].Surname;
-               $("#instructorName").html(el);
+                $("#instructorName").html(el);
+                //Fill the instructorContent
                 $("#instrThumbnail").attr("src","images/Instructors/"+instructors[i].Name+instructors[i].Surname+".jpg");
                 $(".instructorPositionTitle").html(instructors[i].Position);
                 $(".instructorCertTitle").html(instructors[i].Certifications);
                 $("#biography").html(instructors[i].Biography);
                 if(hasAwards){
                     $("#awardsLink").html("Personal Awards");
-                    //el2+="<a href='#' class='hlink'>Personal Awards</a>";
                 }
-                //el2+="<h4>Categories of activity:</h4>";
-                //el2+="<div class='categoriesTeaching'>";
-                //var categoriesList=loadCategories(id);
                 for(var j=0;j<categoriesList.length;j++){
                      el2+="<a href='#'>"+categoriesList[j].Category+"</a><br>";
                 }
                 $(".categoriesTeaching").html(el2);
-                //el2+="</div>";
-                //el2+="<a href='#' class='hlink'>Course teaching list</a>";
+                //Fill tweets div
                 if(!instructors[i].TwitterURL==""){
                     el3+="<a class='twitter-timeline'  href='https://twitter.com/"+instructors[i].TwitterURL+"' data-widget-id='"+instructors[i].TwitterID+"' width='500' height='200' data-chrome='nofooter transparent' data-tweet-limit='2'  data-aria-polite='assertive '>Tweets by @"+instructors[i].TwitterName+"</a>";
                     el3+="<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';                        if(!d.getElementById(id)){js=d.createElement(s);js.id=id;                            js.src=p+'://platform.twitter.com/widgets.js';                            fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');</script>";
                 }
                 $("#tweets").html(el3);
             }
-            //$("#instructorName").html(el);
-            //$("#instructorContent").html(el2);
-            //$("#tweets").html(el3);
         1},
         error: function(request,error) 
         {
