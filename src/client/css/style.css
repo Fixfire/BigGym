@@ -374,7 +374,7 @@ html {
     height: 20px
 }
 
-.instructorName {
+.instructorName, .courseName {
     margin-top:0px
 }
 
@@ -385,6 +385,7 @@ html {
 #map-canvas { 
     width: 50%; 
     height: 50%; 
+    margin-bottom: 10px;
 }
 
 .hlink {
@@ -399,6 +400,7 @@ a{
     color: #66FF99;
 }
 
+
 .calendarRow:nth-child(n) div {
 
     width: 50px;
@@ -409,4 +411,13 @@ a{
     height: 22px;
 }
 
+
+
+#tweets {
+    margin-top: 20px;
+}
+
+#courseInstructorBlock {
+    height: 115px;
+}
 

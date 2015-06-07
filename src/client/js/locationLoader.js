@@ -5,6 +5,7 @@ function initialize() {
     $.ajax({
         method: "POST",
         crossDomain: true, //localhost purposes
+        async: false,
         url: "../../server/getLocation.php", //Relative or absolute path to file.php file
         success: function(response) {
             console.log(JSON.parse(response));
@@ -16,6 +17,7 @@ function initialize() {
                 url=location[i].Url;
                 console.log(lat);
                 console.log(lng);
+                $("#address").html(location[i].CivicNumber+" "+location[i].Address+" "+location[i].City+", "+location[i].State+" "+location[i].ZIP+", "+location[i].Country);
             }
         1},
         error: function(request,error) 

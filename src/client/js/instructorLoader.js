@@ -1,9 +1,20 @@
 $(document).ready(documentReady);
 
 function documentReady(){
+    //Facebook script setup
+    $.ajaxSetup({ cache: true });
+    $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+        FB.init({
+          appId: '1677221109163837',
+        xfbml      : true,
+          version: 'v2.3' // or v2.0, v2.1, v2.0
+        });     
+        $('#loginbutton,#feedbutton').removeAttr('disabled');
+    });
+
     var id=getUrlVars()["instr"];
     var from=getUrlVars()["from"];
-    loadInstructor(id,from);
+    loadInstructor(id,from); 
 }
 
 
@@ -57,31 +68,36 @@ function loadInstructor(id,from){
             var instructors=JSON.parse(response);
             var el="";
             var el2="";
+            var el3="";
             
             createContext(from,el,instructors);
             el="";
             for(var i=0;i<instructors.length;i++){
+                //Set the document title
                 document.title=instructors[i].Name+" "+instructors[i].Surname;
-                //$(".contents").html(" "+instructors[i].Name);
+                //Fill instructor name
                 el+=instructors[i].Name+" "+instructors[i].Surname;
-                el2+="<img src='images/Instructors/"+instructors[i].Name+instructors[i].Surname+".jpg' height='275' width='195' style='float:right;padding-left:10px'/>";
-                el2+="<h4 class='instructorPositionTitle'>"+instructors[i].Position+"</h4>";
-                el2+="<h4 class='instructorCertTitle'>"+instructors[i].Certifications+"</h4>";
-                el2+="<p id='biography'>"+instructors[i].Biography+"</p>";
+                $("#instructorName").html(el);
+                //Fill the instructorContent
+                $("#instrThumbnail").attr("src","images/Instructors/"+instructors[i].Name+instructors[i].Surname+".jpg");
+                $(".instructorPositionTitle").html(instructors[i].Position);
+                $(".instructorCertTitle").html(instructors[i].Certifications);
+                $("#biography").html(instructors[i].Biography);
                 if(hasAwards){
-                    el2+="<a href='#' class='hlink'>Personal Awards</a>";
+                    $("#awardsLink").html("Personal Awards");
                 }
-                el2+="<h4>Categories of activity:</h4>";
-                el2+="<div class='categoriesTeaching'>";
-                //var categoriesList=loadCategories(id);
                 for(var j=0;j<categoriesList.length;j++){
                      el2+="<a href='#'>"+categoriesList[j].Category+"</a><br>";
                 }
-                el2+="</div>";
-                el2+="<a href='#' class='hlink'>Course teaching list</a>";
+                $(".categoriesTeaching").html(el2);
+                $("#teaches").attr("href","http://bigbiggym.altervista.org/client/teaches.html?instr="+instructors[i].Id+"&name="+instructors[i].Name+"&surname="+instructors[i].Surname);
+                //Fill tweets div
+                if(!instructors[i].TwitterURL==""){
+                    el3+="<a class='twitter-timeline'  href='https://twitter.com/"+instructors[i].TwitterURL+"' data-widget-id='"+instructors[i].TwitterID+"' width='500' height='200' data-chrome='nofooter transparent' data-tweet-limit='2'  data-aria-polite='assertive '>Tweets by @"+instructors[i].TwitterName+"</a>";
+                    el3+="<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';                        if(!d.getElementById(id)){js=d.createElement(s);js.id=id;                            js.src=p+'://platform.twitter.com/widgets.js';                            fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');</script>";
+                }
+                $("#tweets").html(el3);
             }
-            $("#instructorName").html(el);
-            $("#subtitleDiv").html(el2);
         1},
         error: function(request,error) 
         {
