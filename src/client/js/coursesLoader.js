@@ -150,7 +150,7 @@ function loadCoursesLevel(){
                 intermediate += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
                 intermediate += "<h3>" + courses[i].Name + "</h3>";
                 intermediate += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
-       intermediate += "<p>Category: " + courses[i].Category + "</p>";
+                intermediate += "<p>Category: " + courses[i].Category + "</p>";
                 intermediate += "<p>Level: " + courses[i].Level + "</p>";
 
                 intermediate += "<button class='btn' type='button' id='std-btn'></button>";
