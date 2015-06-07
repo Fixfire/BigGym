@@ -90,6 +90,7 @@ function loadInstructor(id,from){
                      el2+="<a href='#'>"+categoriesList[j].Category+"</a><br>";
                 }
                 $(".categoriesTeaching").html(el2);
+                $("#teaches").attr("href","http://bigbiggym.altervista.org/client/teaches.html?instr="+instructors[i].Id+"&name="+instructors[i].Name+"&surname="+instructors[i].Surname);
                 //Fill tweets div
                 if(!instructors[i].TwitterURL==""){
                     el3+="<a class='twitter-timeline'  href='https://twitter.com/"+instructors[i].TwitterURL+"' data-widget-id='"+instructors[i].TwitterID+"' width='500' height='200' data-chrome='nofooter transparent' data-tweet-limit='2'  data-aria-polite='assertive '>Tweets by @"+instructors[i].TwitterName+"</a>";
