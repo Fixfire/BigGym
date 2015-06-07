@@ -369,7 +369,7 @@ html {
     height: 20px
 }
 
-.instructorName {
+.instructorName, .courseName {
     margin-top:0px
 }
 
@@ -396,4 +396,8 @@ a{
 
 #tweets {
     margin-top: 20px;
+}
+
+#courseInstructorBlock {
+    height: 115px;
 }
