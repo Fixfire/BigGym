@@ -305,7 +305,7 @@ html {
 
 #calendar {
     height: 100px;
-    width: 300px;
+    width: 320px;
 }
 
 #thunbnail {
@@ -337,6 +337,8 @@ html {
     height: 400px;
     float:left;
     margin-left: 10px;
+    font-size: 12px;
+    text-align: center;
 }
 
 #next {
@@ -344,11 +346,14 @@ html {
     height: 400px;
     float:right;
     margin-right: 10px;
+        font-size: 12px;
+    text-align: center;
 
 }
 
 .indexButton {
     margin-top: 350%;
+    font-size: 29px;
 }
 
 #instructorList {
@@ -393,3 +398,15 @@ html {
 a{
     color: #66FF99;
 }
+
+.calendarRow:nth-child(n) div {
+
+    width: 50px;
+    float: left;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    height: 22px;
+}
+
+
