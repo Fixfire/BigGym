@@ -1,7 +1,7 @@
 <?php
     include 'db_connector.php';
 
-    $coursey=$_POST["course"];
+    $course = $_POST["name"];
    
     # extract results mysqli_result::fetch_array
     $query = "SELECT * FROM course WHERE course.Name = '".$course."'";
