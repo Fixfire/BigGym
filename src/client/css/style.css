@@ -297,9 +297,9 @@ html {
 }
 
 #map-canvas { 
-    width: 50%; 
+    width: 60%; 
     height: 50%; 
-    
+    margin-left:5%;
 }
 
 .hlink {
