@@ -1,91 +1,25 @@
-
-
-
-header {
-    width: 100%;
-    height: 50px;
-
+body{
+    color: #F5F2FF;
+    background-color: #1E3D5C;
 }
 
-
-
-
-
-.dropdown-menu:nth-child(n)  {
+.dropdown-menu:nth-child(n) {
     background-color: #222; 
-    color: #9d9d9d;    
 }
 
-
-.dropdown-menu:nth-child(n) a{
-    color: #9d9d9d;
+.dropdown-menu:nth-child(n) a {
+    background-color: #222; 
+    color: #9d9d9d; 
 }
 
-.hdButton {
-    color: #9d9d9d;
+.dropdown-menu li:last-child   {
+    border-bottom-color: aliceblue;
+    border-bottom-style: solid;
+    border-width: 1px;
 }
 
-.hdButton:hover{
-    color:black;
-}
-
-#hdButton8 {
-    postion:absolute; 
-    top:-275px; 
-    left:15px;
-    width: 160px;
-    color: #9d9d9d;
-}
-
-#hdButton7 {
-    postion:absolute; 
-    top:-235px; 
-    right: 90px;
-    width: 105px;
-}
-
-#hdButton6 {
-    postion:absolute; 
-    top:-195px; 
-    right:160px;
-    width: 70px;
-}
-
-#hdButton5 {
-    postion:absolute; 
-    top:-155px; 
-    right:300px;
-    width: 140px;
-}
-
-#hdButton4 {
-    postion:absolute; 
-    top:-115px; 
-    right:400px;
-    width: 100px;
-    
-}
-
-#hdButton3 {
-    postion:absolute; 
-    top:-75px; 
-    right:530px;
-    width: 130px;
-}
-
-#hdButton2 {
-    postion:absolute; 
-    top:-35px; 
-    right:640px;
-    width: 110px;
-}
-
-#hdButton1 {
-    postion:absolute; 
-    top:5px; 
-    right:730px;
-    width: 90px;
-
+footer {
+    font-size: 10px;
 }
 
 .submitButton {
