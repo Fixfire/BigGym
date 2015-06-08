@@ -1,13 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    min-width: 1024px;
-    width: 100%;
-    color: #F5F2FF;
-    background-color: #1E3D5C;
-    height: auto;
-    min-height: 100%;
-}
+
 
 
 header {
@@ -16,11 +7,7 @@ header {
 
 }
 
-.allWidth {
-    min-width: 1024px;
-    width: 100%;
 
-}
 
 
 
@@ -138,14 +125,7 @@ header {
     width: 100px;
 }
 
-footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 40px;
-  font-size: 10px;
-}
+f
 
 
 html {
@@ -367,11 +347,11 @@ html {
 }
 
 .instructorContainer {
-    height:100px
+    height:100%;
 }
 
 .instructorPosition {
-    height: 20px
+    height: 20px;
 }
 
 .instructorName, .courseName {
@@ -379,7 +359,7 @@ html {
 }
 
 .instructorBtn {
-    margin-top: 10px
+    margin-top: 0%;
 }
 
 #map-canvas { 
@@ -393,7 +373,7 @@ html {
 }
 
 #biography {
-    height: 190px;
+    height: 100%;
 }
 
 a{
