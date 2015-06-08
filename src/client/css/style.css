@@ -365,7 +365,7 @@ html {
 #map-canvas { 
     width: 50%; 
     height: 50%; 
-    margin-bottom: 10px;
+    
 }
 
 .hlink {
@@ -398,6 +398,6 @@ a{
 }
 
 #courseInstructorBlock {
-    height: 115px;
+    height: 100%;
 }
 
