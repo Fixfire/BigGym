@@ -30,12 +30,10 @@ function loadCoursesInstructor(id,name,surname){
                 console.log(courses[i].Name);
                 
                 el += "<div class='col-md-6' id='courseInstructorBlock'>";
-                el += "<img src='images/" +  courses[i].Name+"/main.png' height='100' width='115' style='float:left; margin-right: 10px'/>";
+                el += "<img src='images/" +  courses[i].Name+"/main.png' height='100' width='115' style='float:left; margin-right: 5%'/>";
                 el+= "<div class='courseContainer'>";
                 el += "<h3 class='courseName'>" + courses[i].Name+"</h3>";
                 el += "<p class='courseLevel'>Level: " + courses[i].Level + "</p>";
-                el+="</div>";
-                el+="<div class='courseBtn'>";
                 el += "<button class='btn' type='button' id='std-btn'                 onclick=\"parent.location='course.html?name=" + courses[i].Name + "'\" >More Info</button>";
                 el += "</div> </div>";
             }
