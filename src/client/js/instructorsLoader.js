@@ -24,19 +24,24 @@ function loadInstructors(){
                         el += "</div>";
                         }
                     currentLetter = instructors[i].Surname.charAt(0);
-                    el += "<h3>" + currentLetter + "</h3> <hr>"; 
+                    el += "<div class='row'>";
+                    el += "<div class='col-lg-12'>";
+                    el += "<h3 class='page-header'>" + currentLetter + "</h3>"; 
+                    el += "</div>";
+                    el += "</div>";
                     el += "<div class='row'>";
                 }
-                el += "<div class='col-md-6' id='instructorBlock'>";
-                el += "<img src='images/Instructors/" + instructors[i].Name+instructors[i].Surname + ".jpg' height='140' width='110' style='float:left; padding-right: 10px'/>";
+                el += "<div class='col-md-6 img-portfolio'>";
+                el += "<img class='img-responsive' src='/client/images/Instructors/" + instructors[i].Name+instructors[i].Surname + ".jpg' height='140' width='110' style='float:left; margin-right:5%'/>";
                 el+= "<div class='instructorContainer'>";
                 el += "<h3 class='instructorName'>" + instructors[i].Name + " "+ instructors[i].Surname +"</h3>";
                 el += "<p class='instructorPosition'>" + instructors[i].Position + "</p>";
                 el += "<p>" + instructors[i].Certifications + "</p>";
-                el+="</div>";
-                el+="<div class='instructorBtn'>";
+                
+                //el+="<div class='instructorBtn'>";
                 el += "<button class='btn' type='button' id='std-btn'                 onclick=\"parent.location='instructor.html?instr=" + instructors[i].Id + "'\" >More Info</button>";
                 el += "</div> </div>";
+                //el+="</div>";
             }
             $("#container").html(el);
         1},
