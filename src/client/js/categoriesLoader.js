@@ -27,15 +27,24 @@ function loadCategories(){
             var categories = JSON.parse(response);
             var el = "";
             for (var i=0; i<categories.length; i++) {
-                el += "<div id='category'>";
-                el += "<h4>" + categories[i].Name + "</h4>";
-                el += "<div id='categoryContainer'> <hr>";
+                
+                el+= "<div class=\"row\">";
+            
+                
+                el += "<div class=\"col-md-7\" id=\"categoryDetail\">";
+                el += "<h3>" + categories[i].Name + "</h3>"
+                el += "<p >" + categories[i].ShortDescription + "</p>";
+                el += "<a class=\"btn \" id=\"std-btn\" href=\"#\">More Info</a>";
+                el += "</div>";
+                el += "<a href=\"#l\">";
+                el += "<div class=\"col-md-5\">";
                 var path = getPath(categories[i].Name);
-                el += "<img src='images/" + path + "/main.jpg' height='200' width='200' style='float:right;'/>";
-                el += "<p>" + categories[i].ShortDescription + "</p>";
-                el += "<button class='btn category-btn1' type='button' id='std-btn' >More Info</button>";
-                el += "<button class='btn category-btn2' type='button' id='std-btn' onclick=\"parent.location='coursesbycategory.html?cat=" + categories[i].Name + "'\" >Courses</button>";
-                el += "</div> </div>";
+                el += "<img class=\"img-hover img-responsive\" src=\"images/" + path + "/main.jpg\"  height=\"300\" width=\"300\" >";
+                el += "</a>";
+                el += "</div>";
+                el += "</div>";
+                el += "<hr>";
+
             }
            
             console.log(el);
