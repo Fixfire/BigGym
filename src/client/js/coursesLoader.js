@@ -98,38 +98,10 @@ function loadCoursesLevel(){
             var i=0;
             
             
-            for (i=0; i<courses.length; i++) {
-                if (courses[i].Level != "advanced") {
-                    break;
-                    
-                }
-                advanced += "<div class='col-md-4'>";
-                advanced += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
-                advanced += "<h3>" + courses[i].Name + "</h3>";
-                advanced += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
-
-                advanced += "<p>Category: " + courses[i].Category + "</p>";
-                advanced += "<p>Level: " + courses[i].Level + "</p>";
-
-                advanced += "<button class='btn' type='button' id='std-btn'>More Info</button>";
-                advanced += "</div>";
-                
-            }
             
-            if (advanced != "") {
-                var header="";
-                advanced += "</div>";
-                header = "<div class='row'>";
-                header += "<div class='col-lg-12'>";
-                header += "<h3 class='page-header'>Advanced</h3> "; 
-                header += "</div>";
-                header += "</div>";
-                header += "<div class='row'>";
-                advanced = header+ advanced;
-            }
 
              
-            for (i; i<courses.length; i++) {
+            for (i=0; i<courses.length; i++) {
                 if (courses[i].Level != "beginner") {
                     break;
                     
@@ -189,8 +161,38 @@ function loadCoursesLevel(){
                 header += "<div class='row'>";
                 intermediate = header+ intermediate;
             }
+            
+            for (i; i<courses.length; i++) {
+                if (courses[i].Level != "advanced") {
+                    break;
+                    
+                }
+                advanced += "<div class='col-md-4'>";
+                advanced += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
+                advanced += "<h3>" + courses[i].Name + "</h3>";
+                advanced += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
+
+                advanced += "<p>Category: " + courses[i].Category + "</p>";
+                advanced += "<p>Level: " + courses[i].Level + "</p>";
+
+                advanced += "<button class='btn' type='button' id='std-btn'>More Info</button>";
+                advanced += "</div>";
+                
+            }
+            
+            if (advanced != "") {
+                var header="";
+                advanced += "</div>";
+                header = "<div class='row'>";
+                header += "<div class='col-lg-12'>";
+                header += "<h3 class='page-header'>Advanced</h3> "; 
+                header += "</div>";
+                header += "</div>";
+                header += "<div class='row'>";
+                advanced = header+ advanced;
+            }
  
-            el = beginner + advanced + intermediate;      
+            el = beginner + intermediate + advanced;      
                     
                     
                     
