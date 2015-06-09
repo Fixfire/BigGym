@@ -63,7 +63,7 @@ function loadCoursesAlphabet(){
                 el += "<p>Category: " + courses[i].Category + "</p>";
                 el += "<p>Level: " + courses[i].Level + "</p>";
 
-                el += "<button class='btn' type='button' id='std-btn'>More Info</button>";
+                el += "<button onclick=\"parent.location='course.html?name="+courses[i].Name+"'\"class='btn' type='button' id='std-btn'>More Info</button>";
                 el += "</div>";
             }
             el += "</div>";
@@ -114,7 +114,7 @@ function loadCoursesLevel(){
                 beginner += "<p>Category: " + courses[i].Category + "</p>";
                 beginner += "<p>Level: " + courses[i].Level + "</p>";
 
-                beginner += "<button class='btn' type='button' id='std-btn'>More Info</button>";
+                beginner += "<button onclick=\"parent.location='course.html?name="+courses[i].Name+"'\"class='btn' type='button' id='std-btn'>More Info</button>";
                 beginner += "</div>";
                
             }
@@ -145,7 +145,7 @@ function loadCoursesLevel(){
                 intermediate += "<p>Category: " + courses[i].Category + "</p>";
                 intermediate += "<p>Level: " + courses[i].Level + "</p>";
 
-                intermediate += "<button class='btn' type='button' id='std-btn'>More Info</button>";
+                intermediate += "<button onclick=\"parent.location='course.html?name="+courses[i].Name+"'\"class='btn' type='button' id='std-btn'>More Info</button>";
                 intermediate += "</div>";
                 
             }
@@ -175,7 +175,7 @@ function loadCoursesLevel(){
                 advanced += "<p>Category: " + courses[i].Category + "</p>";
                 advanced += "<p>Level: " + courses[i].Level + "</p>";
 
-                advanced += "<button class='btn' type='button' id='std-btn'>More Info</button>";
+                advanced += "<button onclick=\"parent.location='course.html?name="+courses[i].Name+"'\"class='btn' type='button' id='std-btn'>More Info</button>";
                 advanced += "</div>";
                 
             }
