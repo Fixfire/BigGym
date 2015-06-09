@@ -341,3 +341,7 @@ a{
 #categoryDetail {
     min-height: 200px;
 }
+
+.second-btn {
+    margin-left: 20px;
+}
