@@ -18,6 +18,13 @@ body{
     border-width: 1px;
 }
 
+.navbar-right{
+    position: relative;
+    z-index: 1px;
+    background-color: #222;
+}
+
+
 footer {
     font-size: 10px;
 }
@@ -335,3 +342,7 @@ a{
     height: 100%;
 }
 
+
+#categoryDetail {
+    min-height: 200px;
+}
