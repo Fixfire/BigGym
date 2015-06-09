@@ -6,7 +6,12 @@ function documentReady(){
     loadCoursesCategories(category);
 }
 
-
+function createContext(courses){
+    var el="";
+    el += "<a href='#'>" + courses[0].Category + "</a> <span> > </span>";
+    el += "<h3 class='page-header'>" + courses[0].Category + " Course</h3>";
+    $("#context").html(el);
+}
 
 
 function loadCoursesCategories(category){
@@ -24,17 +29,15 @@ function loadCoursesCategories(category){
             console.log(JSON.parse(response));
             var courses = JSON.parse(response);
             var el = "";
-      
-            el += "<div id='context'>";
-            el +=  "<a href='#'>" + courses[0].Category + "</a> <span> > " + courses[0].Category + " Course</span>";
-            el +=  "</div> <div id='padding'></div> <div id='subtitleDiv'>";
-            el += "<div class='container' id='container'>";
+            
+            createContext(courses);
+            
             el += "<div class='row'>";
             for (var i=0; i<courses.length; i++) {
                
                 console.log(courses[i].Name);
                 
-                el += "<div class='col-md-2' id='courseBlock'>";
+                el += "<div class='col-md-4'>";
                 el += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
                 el += "<h3>" + courses[i].Name + "</h3>";
                 el += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
@@ -44,9 +47,8 @@ function loadCoursesCategories(category){
                 el += "</div>";
             }
             el += "</div>";
-            el += "</div>";
             console.log(el);
-            $(".centralText").html(el);
+            $("#container").html(el);
         1},
         error: function(request,error) 
         {

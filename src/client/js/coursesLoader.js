@@ -29,7 +29,7 @@ function loadCoursesAlphabet(){
 
     console.log("Loading courses");
     
-    document.title="All courses by level";
+    document.title="All courses by alphabet";
     
     $.ajax({
         method: "POST",
@@ -46,20 +46,24 @@ function loadCoursesAlphabet(){
                         el += "</div>";
                         }
                     currentLetter = courses[i].Name.charAt(0);
-                    el += "<h3>" + currentLetter + "</h3> <hr>"; 
+                    el += "<div class='row'>";
+                    el += "<div class='col-lg-12'>";
+                    el += "<h3 class='page-header'>" + currentLetter + "</h3>"; 
+                    el += "</div>";
+                    el += "</div>";
                     el += "<div class='row'>";
                 }
                 
                 console.log(courses[i].Name);
                 
-                el += "<div class='col-md-2' id='courseBlock'>";
+                el += "<div class='col-md-4' img-portfolio>";
                 el += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
                 el += "<h3>" + courses[i].Name + "</h3>";
                 el += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
                 el += "<p>Category: " + courses[i].Category + "</p>";
                 el += "<p>Level: " + courses[i].Level + "</p>";
 
-                el += "<button class='btn' type='button' id='std-btn'></button>";
+                el += "<button class='btn' type='button' id='std-btn'>More Info</button>";
                 el += "</div>";
             }
             el += "</div>";
@@ -99,7 +103,7 @@ function loadCoursesLevel(){
                     break;
                     
                 }
-                advanced += "<div class='col-md-2' id='courseBlock'>";
+                advanced += "<div class='col-md-4'>";
                 advanced += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
                 advanced += "<h3>" + courses[i].Name + "</h3>";
                 advanced += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
@@ -107,13 +111,21 @@ function loadCoursesLevel(){
                 advanced += "<p>Category: " + courses[i].Category + "</p>";
                 advanced += "<p>Level: " + courses[i].Level + "</p>";
 
-                advanced += "<button class='btn' type='button' id='std-btn'></button>";
+                advanced += "<button class='btn' type='button' id='std-btn'>More Info</button>";
                 advanced += "</div>";
+                
             }
             
             if (advanced != "") {
-                advanced = "<h3>Advanced</h3> <hr> <div class='row'>" + advanced; 
+                var header="";
                 advanced += "</div>";
+                header = "<div class='row'>";
+                header += "<div class='col-lg-12'>";
+                header += "<h3 class='page-header'>Advanced</h3> "; 
+                header += "</div>";
+                header += "</div>";
+                header += "<div class='row'>";
+                advanced = header+ advanced;
             }
 
              
@@ -122,7 +134,7 @@ function loadCoursesLevel(){
                     break;
                     
                 }
-                beginner += "<div class='col-md-2' id='courseBlock'>";
+                beginner += "<div class='col-md-4'>";
                 beginner += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
                 beginner += "<h3>" + courses[i].Name + "</h3>";
                 beginner += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
@@ -130,13 +142,21 @@ function loadCoursesLevel(){
                 beginner += "<p>Category: " + courses[i].Category + "</p>";
                 beginner += "<p>Level: " + courses[i].Level + "</p>";
 
-                beginner += "<button class='btn' type='button' id='std-btn'></button>";
+                beginner += "<button class='btn' type='button' id='std-btn'>More Info</button>";
                 beginner += "</div>";
+               
             }
             
             if (beginner != "") {
-                beginner = "<h3>Beginner</h3> <hr> <div class='row'>" + beginner; 
+                var header="";
                 beginner += "</div>";
+                header = "<div class='row'>";
+                header += "<div class='col-lg-12'>";
+                header += "<h3 class='page-header'>Beginner</h3> "; 
+                header += "</div>";
+                header += "</div>";
+                header += "<div class='row'>";
+                beginner = header+ beginner;
             }
             
             
@@ -146,20 +166,28 @@ function loadCoursesLevel(){
                     
                 }
                 
-                intermediate += "<div class='col-md-2' id='courseBlock'>";
+                intermediate += "<div class='col-md-4'>";
                 intermediate += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
                 intermediate += "<h3>" + courses[i].Name + "</h3>";
                 intermediate += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
                 intermediate += "<p>Category: " + courses[i].Category + "</p>";
                 intermediate += "<p>Level: " + courses[i].Level + "</p>";
 
-                intermediate += "<button class='btn' type='button' id='std-btn'></button>";
+                intermediate += "<button class='btn' type='button' id='std-btn'>More Info</button>";
                 intermediate += "</div>";
+                
             }
             
              if (intermediate != "") {
-                intermediate = "<h3>Intermediate</h3> <hr> <div class='row'>" + intermediate; 
+                var header="";
                 intermediate += "</div>";
+                header = "<div class='row'>";
+                header += "<div class='col-lg-12'>";
+                header += "<h3 class='page-header'>Intermediate</h3> "; 
+                header += "</div>";
+                header += "</div>";
+                header += "<div class='row'>";
+                intermediate = header+ intermediate;
             }
  
             el = beginner + advanced + intermediate;      
