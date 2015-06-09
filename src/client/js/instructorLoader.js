@@ -62,7 +62,7 @@ function loadInstructor(id,from){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "../../server/server.php", //Relative or absolute path to file.php file
+        url: "../../server/getInstructor.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
             var instructors=JSON.parse(response);
