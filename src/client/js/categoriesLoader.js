@@ -35,6 +35,7 @@ function loadCategories(){
                 el += "<h3>" + categories[i].Name + "</h3>"
                 el += "<p >" + categories[i].ShortDescription + "</p>";
                 el += "<a class=\"btn \" id=\"std-btn\" href=\"#\">More Info</a>";
+                el += "<a class=\"btn second-btn\" id=\"std-btn\" href=\"coursesbycategory.html?cat=" + categories[i].Name + "\">Courses</a>";
                 el += "</div>";
                 el += "<a href=\"#l\">";
                 el += "<div class=\"col-md-5\">";
