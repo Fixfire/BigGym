@@ -2,7 +2,7 @@
     include 'db_connector.php';
 
     # extract results mysqli_result::fetch_array
-    $query = "SELECT * FROM course ORDER BY level";
+    $query = "SELECT * FROM course ORDER BY Level";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available
