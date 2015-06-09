@@ -336,3 +336,8 @@ a:visited{
 #courseRoom {
     margin-top:60px;
 }
+
+#logo {
+    position: relative;
+    bottom: 15px;
+}
