@@ -26,10 +26,14 @@ function loadCourses(name){
             console.log(courses[0].Name);
             
             $(".headerImg").attr("src","images/" + courses[0].Category + "/head.jpg");
-            $(".centralText > h3").html(courses[0].Name);       
+            $(".page-header").html(courses[0].Name);       
             $("#roomLink").html("Room " + courses[0].Room);
             $("#courseImage").attr("src","images/" + courses[0].Name + "/main.png");    
             $("#courseDescription > p").html(courses[0].Description);
+            $("#courseImage1").attr("src","images/" + courses[0].Name + "/main.png");
+            $("#courseImage2").attr("src","images/" + courses[0].Name + "/main.png");
+            $("#courseImage3").attr("src","images/" + courses[0].Name + "/main.png");
+            $("#courseImage4").attr("src","images/" + courses[0].Name + "/main.png");
   
         },
         error: function(request,error) 
