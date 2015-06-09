@@ -303,6 +303,9 @@ html {
 a{
     color: #66FF99;
 }
+a:visited{
+    color: #66FF99;
+}
 
 
 .calendarRow:nth-child(n) div {
