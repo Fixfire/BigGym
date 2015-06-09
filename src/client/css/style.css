@@ -200,17 +200,7 @@ html {
     padding-left: 10px;
 }
 
-#courseDescription {
-    
-    padding-left: 10%;
-    min-width: 100px;
-    max-width: 57%;
-    min-height: 500px;
-    max-height: 500px;
-    float:left;
-    
-    
-}
+
 
 #courseRegister {
     float: left;
@@ -221,7 +211,9 @@ html {
 
 #calendar {
     height: 100px;
-    width: 320px;
+    width: 310px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
 #thunbnail {
@@ -232,6 +224,7 @@ html {
 
 #courseInstructor {
     height: 200px;
+    max-width: 300px;
 }
 
 #courseInstructor:nth-child(n) p {
@@ -249,22 +242,17 @@ html {
 
 
 #prev {
-    width: 50px;
-    height: 400px;
-    float:left;
-    margin-left: 10px;
+    position: fixed;
+    bottom:30%;
     font-size: 12px;
     text-align: center;
 }
 
 #next {
-    width: 50px;
-    height: 400px;
-    float:right;
-    margin-right: 10px;
-        font-size: 12px;
+    position: fixed;
+    right: 0px;
+    bottom:30%;
     text-align: center;
-
 }
 
 .indexButton {
@@ -344,4 +332,7 @@ a{
 
 .second-btn {
     margin-left: 20px;
+}
+#courseRoom {
+    margin-top:60px;
 }
