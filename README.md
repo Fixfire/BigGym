@@ -19,3 +19,6 @@ By Claudio Sanna & Michele Zanella
 
 *--------------------------------------------------------------------------------*
 
+NOT FULLY IMPLEMENTED FEATURES:
+
+- The Registration Form payment method is not implemented, it only verifies if a payement method is selected and if the privacy/agreement box is checked to perform the "virtual" payment.
