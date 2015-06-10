@@ -28,7 +28,7 @@ function loadCourses(name, from){
             if (from == "all") {
                 $("#context").html("<a href='#'>" + courses[0].Category + "</a> <span> > </span>");
             } else {
-                $("#context").html("<a href='#'>" + courses[0].Category + "</a> <span> > </span><a href='categories.html?cat=" + courses[0].Category + "'>All " + courses[0].Category + " courses</a> <span> > </span>");
+                $("#context").html("<a href='#'>" + courses[0].Category + "</a> <span> > </span><a href='coursesbycategory.html?cat=" + courses[0].Category + "'>All " + courses[0].Category + " courses</a> <span> > </span>");
             }
           
             $(".headerImg").attr("src","images/" + courses[0].Category + "/head.jpg");
