@@ -89,6 +89,8 @@ function loadInstructor(id,from){
                 $(".instructorCertTitle").html(instructors[i].Certifications);
                 $("#biography").html(instructors[i].Biography);
                 
+                $("#awardsLink").attr("href","awards.html?id="+instructors[i].Id+"&name="+instructors[i].Name+"&surname="+instructors[i].Surname);
+                
                 $("#teaches").attr("href","http://bigbiggym.altervista.org/client/teaches.html?instr="+instructors[i].Id+"&name="+instructors[i].Name+"&surname="+instructors[i].Surname);
                 //Fill tweets div
                 if(!instructors[i].TwitterURL==""){
