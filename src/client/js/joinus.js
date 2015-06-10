@@ -2,7 +2,7 @@ $(document).ready(documentReady);
 
 function documentReady(){
     $("#joinus").submit(function(event){
-        alert( "Handler for .submit() called." );
+        //alert( "Handler for .submit() called." );
         /* stop form from submitting normally */
         event.preventDefault();
         
@@ -13,7 +13,7 @@ function documentReady(){
         $.ajax( {
             method: "POST",
             crossDomain: true, //localhost purposes
-            url: url, 
+            url: "../server/joinus.php", 
             data: { appellative: $('#appellative').val(), 
                         surname: $('#surname').val(),
                         name: $('#name').val(),
@@ -32,6 +32,7 @@ function documentReady(){
                     },
             success: function(response) {
                 alert( "Registration succeded! An email will be send when you can come to our desk office and keep your membership card" );
+                window.location.replace('http://bigbiggym.altervista.org/client/index.html');
             },
             error: function(request,error) 
         {

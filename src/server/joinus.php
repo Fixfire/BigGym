@@ -34,7 +34,7 @@
 
         //prepared statement execution
         if($stmt->execute()){
-        echo ($stmt->affected_rows." Row inserted.\n");
+        
         }else{
             echo ("error: ".htmlspecialchars($stmt->error).htmlspecialchars($mysqli->error));
         }
