@@ -5,7 +5,6 @@ function initialize() {
     $.ajax({
         method: "POST",
         crossDomain: true, //localhost purposes
-        async: false,
         url: "../../server/getLocation.php", //Relative or absolute path to file.php file
         success: function(response) {
             console.log(JSON.parse(response));
@@ -19,6 +18,23 @@ function initialize() {
                 console.log(lng);
                 $("#address").html(location[i].CivicNumber+" "+location[i].Address+" "+location[i].City+", "+location[i].State+" "+location[i].ZIP+", "+location[i].Country);
             }
+            
+            var mapOptions = {
+            center: new google.maps.LatLng(lat, lng), //37.091 -76.478
+            zoom: 16
+            };
+            var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+
+            // Creating a marker and positioning it on the map  
+            var marker = new google.maps.Marker({  
+                position: new google.maps.LatLng(lat, lng),  
+                title: 'Big Gym',
+                url: url,
+                map: map  
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+                window.location.href = url;
+            });
         1},
         error: function(request,error) 
         {
@@ -26,20 +42,5 @@ function initialize() {
         }
     });
     
-    var mapOptions = {
-        center: new google.maps.LatLng(lat, lng), //37.091 -76.478
-        zoom: 16
-    };
-    var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
     
-    // Creating a marker and positioning it on the map  
-    var marker = new google.maps.Marker({  
-        position: new google.maps.LatLng(lat, lng),  
-        title: 'Big Gym',
-        url: url,
-        map: map  
-    });
-    google.maps.event.addListener(marker, 'click', function() {
-        window.location.href = url;
-    });
 }

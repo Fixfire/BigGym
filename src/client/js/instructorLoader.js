@@ -35,19 +35,22 @@ function loadInstructor(id,from){
     
     $.ajax({
         method: "POST",
-        async:false,
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "../../server/getInstructorCategories.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
             categoriesList=JSON.parse(response);
+            var el2="";
+            for(var j=0;j<categoriesList.length;j++){
+                el2+="<a href='#'>"+categoriesList[j].Category+"</a><br>";
+            }
+            $(".categoriesTeaching").html(el2);
         1},
     });
     
     $.ajax({
         method: "POST",
-        async:false,
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "../../server/hasAwards.php", //Relative or absolute path to file.php file
@@ -55,6 +58,9 @@ function loadInstructor(id,from){
         success: function(response) {
             var result=JSON.parse(response);
             hasAwards=result['boolean'];
+            if(hasAwards){
+                $("#awardsLink").html("Personal Awards");
+            }
         1},
     });
     
@@ -67,7 +73,6 @@ function loadInstructor(id,from){
         success: function(response) {
             var instructors=JSON.parse(response);
             var el="";
-            var el2="";
             var el3="";
             
             createContext(from,el,instructors);
@@ -83,13 +88,7 @@ function loadInstructor(id,from){
                 $(".instructorPositionTitle").html(instructors[i].Position);
                 $(".instructorCertTitle").html(instructors[i].Certifications);
                 $("#biography").html(instructors[i].Biography);
-                if(hasAwards){
-                    $("#awardsLink").html("Personal Awards");
-                }
-                for(var j=0;j<categoriesList.length;j++){
-                     el2+="<a href='#'>"+categoriesList[j].Category+"</a><br>";
-                }
-                $(".categoriesTeaching").html(el2);
+                
                 $("#teaches").attr("href","http://bigbiggym.altervista.org/client/teaches.html?instr="+instructors[i].Id+"&name="+instructors[i].Name+"&surname="+instructors[i].Surname);
                 //Fill tweets div
                 if(!instructors[i].TwitterURL==""){
