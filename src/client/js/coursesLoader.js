@@ -40,6 +40,7 @@ function loadCoursesAlphabet(){
             var courses = JSON.parse(response);
             var el = "";
             var currentLetter = '';
+            $("#anchor").show();
             for (var i=0; i<courses.length; i++) {
                 if (courses[i].Name.charAt(0) != currentLetter) {
                     if (currentLetter != '') {
@@ -48,7 +49,7 @@ function loadCoursesAlphabet(){
                     currentLetter = courses[i].Name.charAt(0);
                     el += "<div class='row'>";
                     el += "<div class='col-lg-12'>"; 
-                    el += "<h3 class='page-header' id=\"" +currentLetter +" \"> " + currentLetter + "</h3>"; 
+                    el += "<h3 class='page-header' id=\"" +currentLetter + "\"> " + currentLetter + " <a href=\"#\"><small> top</small><small class=\"glyphicon glyphicon-arrow-up\"></small></a></h3>"; 
                     el += "</div>";
                     el += "</div>";
                     el += "<div class='row'>";
@@ -98,7 +99,7 @@ function loadCoursesLevel(){
             var i=0;
             
             
-            
+            $("#anchor").hide();
 
              
             for (i=0; i<courses.length; i++) {

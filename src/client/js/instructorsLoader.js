@@ -26,7 +26,7 @@ function loadInstructors(){
                     currentLetter = instructors[i].Surname.charAt(0);
                     el += "<div class='row'>";
                     el += "<div class='col-lg-12'>";
-                    el += "<h3 class='page-header'>" + currentLetter + "</h3>"; 
+                    el += "<h3 class='page-header' id=\"" +currentLetter + "\"> " + currentLetter + " <a href=\"#\"><small> top</small><small class=\"glyphicon glyphicon-arrow-up\"></small></a></h3>"; 
                     el += "</div>";
                     el += "</div>";
                     el += "<div class='row'>";
