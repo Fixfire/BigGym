@@ -34,7 +34,7 @@ function loadCoursesInstructor(id,name,surname){
                 el+= "<div class='courseContainer'>";
                 el += "<h3 class='courseName'>" + courses[i].Name+"</h3>";
                 el += "<p class='courseLevel'>Level: " + courses[i].Level + "</p>";
-                el += "<button class='btn' type='button' id='std-btn'                 onclick=\"parent.location='course.html?name=" + courses[i].Name + "'\" >More Info</button>";
+                el += "<button class='btn' type='button' id='std-btn'                 onclick=\"parent.location='course.html?name=" + courses[i].Name + "&from=all'\" >More Info</button>";
                 el += "</div> </div>";
             }
             console.log(el);

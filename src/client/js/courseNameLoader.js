@@ -3,13 +3,14 @@ $(document).ready(documentReady);
 function documentReady(){
     console.log("I'm ready");
     var name = getUrlVars()["name"];
-    loadCourses(name);
+    var from = getUrlVars()["from"];
+    loadCourses(name, from);
 }
 
 
 
 
-function loadCourses(name){
+function loadCourses(name, from){
 
     console.log("Loading course " + name.toString());
     
@@ -24,7 +25,12 @@ function loadCourses(name){
             console.log(JSON.parse(response));
             var courses = JSON.parse(response);
             console.log(courses[0].Name);
-            $("#context").html("<a href='#'>" + courses[0].Category + "</a> <span> > </span>");
+            if (from == "all") {
+                $("#context").html("<a href='#'>" + courses[0].Category + "</a> <span> > </span>");
+            } else {
+                $("#context").html("<a href='#'>" + courses[0].Category + "</a> <span> > </span><a href='categories.html?cat=" + courses[0].Category + "'>All " + courses[0].Category + " courses</a> <span> > </span>");
+            }
+          
             $(".headerImg").attr("src","images/" + courses[0].Category + "/head.jpg");
             $(".page-header").html(courses[0].Name);       
             $("#roomLink").html("Room " + courses[0].Room);
@@ -43,7 +49,6 @@ function loadCourses(name){
     });
     
     console.log("Loading teachers " + name.toString());
-    
 
     
     $.ajax({
@@ -70,6 +75,8 @@ function loadCourses(name){
         }
     });
     
+    console.log("Loading lessons " + name.toString());
+    
     $.ajax({
         method: "POST",
         crossDomain: true, //localhost purposes
@@ -90,6 +97,91 @@ function loadCourses(name){
             console.log("Error");
         }
     });
+    
+    console.log("Loading guided tour " + name.toString());
+    
+    if (from == "all") {
+         $.ajax({
+            method: "POST",
+            crossDomain: true, //localhost purposes
+            url: "../../server/getAllCourses_alphabet.php", //Relative or absolute path to file.php file
+            success: function(response) {
+                console.log(JSON.parse(response));
+                var courses= JSON.parse(response);
+                var next;
+                var prev;
+
+                 for (var i=0; i<courses.length; i++) {
+                     if (courses[i].Name == name) {
+                         if (i == 0) {
+                             prev = courses[courses.length - 1].Name;
+                         } else {
+                             prev = courses[i - 1].Name;
+                         }
+                         
+                         if (i == (courses.length - 1)) {
+                             next = courses[0].Name;
+                         } else {
+                             next = courses[ i + 1].Name;
+                         }
+                         break;
+                     }
+    
+                 }
+
+                $("#prev > a").attr("href","course.html?name=" + prev + "&from=" + from );
+                $("#next > a").attr("href","course.html?name=" + next + "&from=" + from );
+            },
+            error: function(request,error) 
+            {
+                console.log("Error");
+            }
+        });
+    } else {
+        $.ajax({
+            method: "POST",
+            crossDomain: true, //localhost purposes
+            url: "../../server/getAllCourses_category.php", //Relative or absolute path to file.php file
+            data: {category:from},
+            success: function(response) {
+                console.log(JSON.parse(response));
+                var courses= JSON.parse(response);
+                var next;
+                var prev;
+
+                 for (var i=0; i<courses.length; i++) {
+                     if (courses[i].Name == name) {
+                         if (i == 0) {
+                             prev = courses[courses.length - 1].Name;
+                         } else {
+                             prev = courses[i - 1].Name;
+                         }
+                         
+                         if (i == (courses.length - 1)) {
+                             next = courses[0].Name;
+                         } else {
+                             next = courses[ i + 1].Name;
+                         }
+                         break;
+                     }
+    
+                 }
+
+                $("#prev > a").attr("href","course.html?name=" + prev + "&from=" + from );
+                $("#next > a").attr("href","course.html?name=" + next + "&from=" + from );
+            },
+            error: function(request,error) 
+            {
+                console.log("Error");
+            }
+        });
+        
+    }
+    
+    
+
+    
+    
 
 }
 

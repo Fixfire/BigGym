@@ -43,7 +43,7 @@ function loadCoursesCategories(category){
                 el += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
                 el += "<p>Category: " + courses[i].Category + "</p>";
                 el += "<p>Level: " + courses[i].Level + "</p>";
-                el += "<button class='btn' type='button' id='std-btn' onclick=\"parent.location='course.html?name=" + courses[i].Name + "'\">More Info</button>";
+                el += "<button class='btn' type='button' id='std-btn' onclick=\"parent.location='course.html?name=" + courses[i].Name + "&from=" + courses[i].Category + "'\">More Info</button>";
                 el += "</div>";
             }
             el += "</div>";
