@@ -47,8 +47,8 @@ function loadCoursesAlphabet(){
                         }
                     currentLetter = courses[i].Name.charAt(0);
                     el += "<div class='row'>";
-                    el += "<div class='col-lg-12'>";
-                    el += "<h3 class='page-header'>" + currentLetter + "</h3>"; 
+                    el += "<div class='col-lg-12'>"; 
+                    el += "<h3 class='page-header' id=\"" +currentLetter +" \"> " + currentLetter + "</h3>"; 
                     el += "</div>";
                     el += "</div>";
                     el += "<div class='row'>";
