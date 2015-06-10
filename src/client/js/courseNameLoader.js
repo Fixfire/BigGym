@@ -24,7 +24,7 @@ function loadCourses(name){
             console.log(JSON.parse(response));
             var courses = JSON.parse(response);
             console.log(courses[0].Name);
-            
+            $("#context").html("<a href='#'>" + courses[0].Category + "</a> <span> > </span>");
             $(".headerImg").attr("src","images/" + courses[0].Category + "/head.jpg");
             $(".page-header").html(courses[0].Name);       
             $("#roomLink").html("Room " + courses[0].Room);
