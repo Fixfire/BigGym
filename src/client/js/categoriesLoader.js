@@ -37,8 +37,8 @@ function loadCategories(){
                 el += "<a class=\"btn \" id=\"std-btn\" href=\"#\">More Info</a>";
                 el += "<a class=\"btn second-btn\" id=\"std-btn\" href=\"coursesbycategory.html?cat=" + categories[i].Name + "\">Courses</a>";
                 el += "</div>";
-                el += "<a href=\"#l\">";
                 el += "<div class=\"col-md-5\">";
+                el += "<a href=\"#\">";
                 var path = getPath(categories[i].Name);
                 el += "<img class=\"img-hover img-responsive\" src=\"images/" + path + "/main.jpg\"  height=\"300\" width=\"300\" >";
                 el += "</a>";
