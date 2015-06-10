@@ -30,10 +30,10 @@ function loadCourses(name){
             $("#roomLink").html("Room " + courses[0].Room);
             $("#courseImage").attr("src","images/" + courses[0].Name + "/main.png");    
             $("#courseDescription > p").html(courses[0].Description);
-            $("#courseImage1").attr("src","images/" + courses[0].Name + "/main.png");
-            $("#courseImage2").attr("src","images/" + courses[0].Name + "/main.png");
-            $("#courseImage3").attr("src","images/" + courses[0].Name + "/main.png");
-            $("#courseImage4").attr("src","images/" + courses[0].Name + "/main.png");
+            $("#courseImage1").attr("src","images/" + courses[0].Name + "/1.jpg");
+            $("#courseImage2").attr("src","images/" + courses[0].Name + "/2.jpg");
+            $("#courseImage3").attr("src","images/" + courses[0].Name + "/3.jpg");
+            $("#courseImage4").attr("src","images/" + courses[0].Name + "/4.jpg");
   
         },
         error: function(request,error) 
