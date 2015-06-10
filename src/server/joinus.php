@@ -26,14 +26,23 @@
         $hasPaid=1;
     }
 
-    # prepare the statement with parameters binding to avoid SQL injection
-    $stmt = $mysqli->prepare("INSERT INTO client ('Appellative','Name','Surname','BirthDate','Address','City','ZIP-CODE','Country','State','PhoneNumber','Email','IsStudent','MedicalOk','HasPaid','Weight','Height') VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-    $stmt->bind_param("ssssssssssssssss",$appellative,$surname,$name,$birthdate,$address,$city,$zip,$country,$state,$phone,$email,$isStudent,$medicalOk,$hasPaid,$weight,$eight);
-    //prepared statement execution
-    $stmt->execute();
+    $sql="INSERT INTO client (Appellative,Name,Surname,BirthDate,Address,City,ZIP,Country,State,PhoneNumber,Email,IsStudent,MedicalOk,HasPaid,Weight,Height) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-    echo ("%d Row inserted.\n", $stmt->affected_rows);
+    // prepare the statement with parameters binding to avoid SQL injection
+    if($stmt = $mysqli->prepare($sql)){
+        $stmt->bind_param("sssdssdssdsddddd",$appellative,$surname,$name,$birthdate,$address,$city,$zip,$country,$state,$phone,$email,$isStudent,$medicalOk,$hasPaid,$weight,$height);
+
+        //prepared statement execution
+        if($stmt->execute()){
+        echo ($stmt->affected_rows." Row inserted.\n");
+        }else{
+            echo ("error: ".htmlspecialchars($stmt->error).htmlspecialchars($mysqli->error));
+        }
+    }else{
+        echo ("error: ".htmlspecialchars($stmt->error).htmlspecialchars($mysqli->error));
+    }
+
 
     /* close statement and connection */
-    $stmt->close();
+    $mysqli->close();
 ?>
