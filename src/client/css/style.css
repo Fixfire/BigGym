@@ -58,14 +58,6 @@ footer {
 }
 
 
-
-#rights {
-    position: relative;
-    top: -25px;
-    left: 50%;
-    width: 100px;
-}
-
 html {
   position: relative;
   min-height: 100%;
@@ -123,6 +115,10 @@ html {
     overflow: visible;
 }
 
+
+#courseDescription:nth-child(n) p{
+    min-height: 200px;
+}
 
 
 
