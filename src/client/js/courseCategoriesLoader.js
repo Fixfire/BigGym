@@ -23,7 +23,7 @@ function loadCoursesCategories(category){
     $.ajax({
         method: "POST",
         crossDomain: true, //localhost purposes
-        url: "../../server/getAllCourses_category.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/getAllCourses_category.php", //Relative or absolute path to file.php file
         data: {category:category},
         success: function(response) {
             console.log(JSON.parse(response));

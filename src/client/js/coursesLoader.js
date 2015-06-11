@@ -34,7 +34,7 @@ function loadCoursesAlphabet(){
     $.ajax({
         method: "POST",
         crossDomain: true, //localhost purposes
-        url: "../../server/getAllCourses_alphabet.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/getAllCourses_alphabet.php", //Relative or absolute path to file.php file
         success: function(response) {
             console.log(JSON.parse(response));
             var courses = JSON.parse(response);
@@ -88,7 +88,7 @@ function loadCoursesLevel(){
     $.ajax({
         method: "POST",
         crossDomain: true, //localhost purposes
-        url: "../../server/getAllCourses_level.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/getAllCourses_level.php", //Relative or absolute path to file.php file
         success: function(response) {
             console.log(JSON.parse(response));
             var courses = JSON.parse(response);

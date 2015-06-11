@@ -19,7 +19,7 @@ function loadAwards(id,name,surname){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "../../server/getAwards.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/getAwards.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
             console.log(JSON.parse(response));

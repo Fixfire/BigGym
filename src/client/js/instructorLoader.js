@@ -37,7 +37,7 @@ function loadInstructor(id,from){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "../../server/getInstructorCategories.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/getInstructorCategories.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
             categoriesList=JSON.parse(response);
@@ -53,7 +53,7 @@ function loadInstructor(id,from){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "../../server/hasAwards.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/hasAwards.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
             var result=JSON.parse(response);
@@ -68,7 +68,7 @@ function loadInstructor(id,from){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "../../server/getInstructor.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/getInstructor.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
             var instructors=JSON.parse(response);
