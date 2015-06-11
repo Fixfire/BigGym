@@ -1,7 +1,7 @@
 $(document).ready(documentReady);
 
 function documentReady(){
-    var id = getUrlVars()["instr"];
+    var id = getUrlVars()["id"];
     var name=getUrlVars()["name"];
     var surname=getUrlVars()["surname"];
     loadAwards(id,name, surname); 
@@ -36,7 +36,9 @@ function loadAwards(id,name,surname){
                 el+=awards[i].Name;
                 el+="</td>";
                 el+="<td>";
-                el+="<img src='images/Instructor/"+name+surname+"/awards/"+awards[i].Year+".png' width='50' height='50'/>";
+                if(awards[i].HasImg){
+                    el+="<img src='images/Instructors/"+name+surname+"/awards/"+awards[i].Year+".png' width='50' height='80'/>";
+                }
                 el+="</td>";
                 el+="</tr>";
             }
