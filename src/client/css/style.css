@@ -371,6 +371,29 @@ a > small {
 
 }
 
+.breadcrumb {
+    background: rgba(36, 35, 35, 0.50); 
+    border: 0px solid rgba(36, 35, 35, 0.89); 
+    border-radius: 6px; 
+    display: block;
+}
+.breadcrumb li {
+    font-size: 14px;
+}
+.breadcrumb a {
+    color: #66FF99;
+}
+.breadcrumb a:hover {
+    color: #66FF99;
+}
+.breadcrumb>.active {
+    color: rgba(153, 153, 153, 1);
+}
+.breadcrumb>li+li:before {
+    color: rgba(204, 204, 204, 1); 
+    content: "\002F\00a0";
+}
+
 /*TWITTER FEED CSS STYLE*/
 #twitter-feed {
     width:258px;

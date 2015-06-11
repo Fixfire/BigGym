@@ -144,7 +144,7 @@ function fillTweets(instructor) {
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "../../server/twitterFeed.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/twitterFeed.php", //Relative or absolute path to file.php file
        
         data: {twitterprofile:twitterprofile},
         success: function(response) {   
