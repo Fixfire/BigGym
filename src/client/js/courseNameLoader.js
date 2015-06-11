@@ -19,7 +19,7 @@ function loadCourses(name, from){
     $.ajax({
         method: "POST",
         crossDomain: true, //localhost purposes
-        url: "../../server/getCourses_name.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/getCourses_name.php", //Relative or absolute path to file.php file
         data: {name:name},
         success: function(response) {
             console.log(JSON.parse(response));
@@ -54,7 +54,7 @@ function loadCourses(name, from){
     $.ajax({
         method: "POST",
         crossDomain: true, //localhost purposes
-        url: "../../server/getTeaches.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/getTeaches.php", //Relative or absolute path to file.php file
         data: {name:name},
         success: function(response) {
             console.log(JSON.parse(response));
@@ -80,7 +80,7 @@ function loadCourses(name, from){
     $.ajax({
         method: "POST",
         crossDomain: true, //localhost purposes
-        url: "../../server/getLessons.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/getLessons.php", //Relative or absolute path to file.php file
         data: {name:name},
         success: function(response) {
             console.log(JSON.parse(response));
@@ -104,7 +104,7 @@ function loadCourses(name, from){
          $.ajax({
             method: "POST",
             crossDomain: true, //localhost purposes
-            url: "../../server/getAllCourses_alphabet.php", //Relative or absolute path to file.php file
+            url: "http://bigbiggym.altervista.org/server/getAllCourses_alphabet.php", //Relative or absolute path to file.php file
             success: function(response) {
                 console.log(JSON.parse(response));
                 var courses= JSON.parse(response);
@@ -141,7 +141,7 @@ function loadCourses(name, from){
         $.ajax({
             method: "POST",
             crossDomain: true, //localhost purposes
-            url: "../../server/getAllCourses_category.php", //Relative or absolute path to file.php file
+            url: "http://bigbiggym.altervista.org/server/getAllCourses_category.php", //Relative or absolute path to file.php file
             data: {category:from},
             success: function(response) {
                 console.log(JSON.parse(response));

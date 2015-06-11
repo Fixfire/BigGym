@@ -13,7 +13,7 @@ function documentReady(){
         $.ajax( {
             method: "POST",
             crossDomain: true, //localhost purposes
-            url: "../server/joinus.php", 
+            url: "http://bigbiggym.altervista.org/server/joinus.php", 
             data: { appellative: $('#appellative').val(), 
                         surname: $('#surname').val(),
                         name: $('#name').val(),
