@@ -123,6 +123,11 @@ html {
     padding-bottom: 10px;
 }
 
+#container {
+    width: 100%;
+    padding-right: 0;
+}
+
 
 
 #prev {
@@ -160,6 +165,8 @@ html {
 .instructorBtn {
     margin-top: 0%;
 }
+
+
 
 #map-canvas { 
     width: 60%; 
