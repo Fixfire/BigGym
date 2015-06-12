@@ -73,7 +73,6 @@ function loadInstructor(id,from){
         success: function(response) {
             var instructors=JSON.parse(response);
             var el="";
-            var el3="";
             
             createContext(from,el,instructors);
             el="";
@@ -96,7 +95,6 @@ function loadInstructor(id,from){
                 if(!instructors[i].TwitterURL==""){
                    fillTweets(instructors[i]);
                 }
-                $("#tweets").html(el3);
             }
         1},
         error: function(request,error) 
