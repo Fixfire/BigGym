@@ -36,7 +36,8 @@ function loadAwards(id,name,surname){
                 el+=awards[i].Name;
                 el+="</td>";
                 el+="<td>";
-                if(awards[i].HasImg){
+                console.log(awards[i].HasImg);
+                if(awards[i].HasImg==1){
                     el+="<img src='images/Instructors/"+name+surname+"/awards/"+awards[i].Year+".png' width='50' height='80'/>";
                 }
                 el+="</td>";
