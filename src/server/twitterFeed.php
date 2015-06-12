@@ -6,7 +6,7 @@ require_once("twitteroauth-master/twitteroauth/twitteroauth.php"); //Path to twi
 $twitterprofile = $_POST["twitterprofile"];
 
 $twitteruser = $twitterprofile;
-$notweets = 2;
+$notweets = 4;
 $consumerkey = "BOovZUcHv2fQlXeDhTFPVGQZ1";
 $consumersecret = "jku7hEXIePj1BFk7Y2uxwqbz6sm5RBfEaI18VCDg8e8pGW02pw";
 $accesstoken = "398745094-qp0ggaEmbwWQAhaMM0vvTwkOC1M7ux2D9C9CGEBi";

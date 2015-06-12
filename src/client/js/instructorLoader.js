@@ -122,7 +122,7 @@ function getUrlVars()
 
 /* TWETTER JS CORE*/
 function fillTweets(instructor) {
-    var displaylimit = 3;
+    var displaylimit = 4;
     var twitterprofile = instructor.TwitterURL;
 	//var screenname = instructor.Name"Michele Zanella";
     var showdirecttweets = false;
