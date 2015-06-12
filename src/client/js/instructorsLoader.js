@@ -32,7 +32,7 @@ function loadInstructors(){
                     el += "<div class='row'>";
                 }
                 el += "<div class='col-md-6 img-portfolio'>";
-                el += "<img src='/client/images/Instructors/" + instructors[i].Name+instructors[i].Surname + ".jpg' height='140' width='110' style='float:left; margin-right:5%'/>";
+                el += "<img src='images/Instructors/" + instructors[i].Name+instructors[i].Surname + ".jpg' height='140' width='110' style='float:left; margin-right:5%'/>";
                 el+= "<div class='instructorContainer'>";
                 el += "<h3 class='instructorName'>" + instructors[i].Name + " "+ instructors[i].Surname +"</h3>";
                 el += "<p class='instructorPosition'>" + instructors[i].Position + "</p>";

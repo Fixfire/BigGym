@@ -39,25 +39,6 @@ footer {
 }
 
 
-.centralText {
-    padding-left: 5%;
-    padding-right: 5%;
-    
-}
-
-
-#leftHomeText {
-    text-align: right;
-    padding-left: 12%;
-    padding-top: 3%;
-}
-
-#centerHomeText {
-    text-align: center;
-    padding-top: 3%;
-}
-
-
 html {
   position: relative;
   min-height: 100%;
@@ -69,67 +50,13 @@ html {
    max-height: 250px;
 }
 
-#subtitleDiv {
-    padding-left: 30px;
-}
-
-
-
-#padding {
-    height: 60px;
-    
-}
-
-
-
 #courseDetail {
     width: 230px;
     height: 130px;
 }
 
-
-
-#container {
-    width: 100%;
-
-    padding-right: 0;
-
-}
-
-#courseBlock {
-    width: 300px;
-    height: 480px;
-}
-
-#pagination {
-    position: sticky;
-    left: 0px;
-    top 300px;
-    font-size: 10px;
-}
-
-#pagination:nth-child(n) li {
-    list-style-type: none;
-    position: relative;
-    right: 20px;
-    overflow: visible;
-}
-
-
 #courseDescription:nth-child(n) p{
     min-height: 200px;
-}
-
-
-
-
-
-
-
-
-#category {
-    font-size: 13px;
-    height: 300px
 }
 
 #categoryList {
@@ -153,29 +80,10 @@ html {
 
 }
 
-#categoryContainer {
-    position: relative;
-    bottom: 15px;
-    
-}
-
-.category-btn1 {
-    margin-top: 5.5%;
-    margin-left: 50%;
-}
-
-
-.category-btn2 {
-    margin-top: 5.5%;
-    margin-left: 15px;
-}
-
 
 
 #context {
     padding-top: 10px;
-
-    
 }
 
 #context:nth-child(n) span {
@@ -184,24 +92,6 @@ html {
     font-size: 20px;    
 }
 
-#courseInfo {
-    float: left;
-    padding-left: 20px; 
-    font-size: 13px;
-    border-right-style: solid;
-    border-right-color: #F5F2FF;
-    border-right-width: 2px;
-    padding-left: 10px;
-}
-
-
-
-#courseRegister {
-    float: left;
-    margin-top: 10px;
-    margin-left: 50px;
-    font-size: 16px;
-}
 
 #calendar {
     height: 100px;
@@ -254,15 +144,6 @@ html {
     font-size: 29px;
 }
 
-#instructorList {
-    padding-top:  10px;
-    font-size: 10px;
-}
-
-#instructorBlock {
-    height: 150px;
-    margin-bottom: 10px;
-}
 
 .instructorContainer {
     height:100%;
@@ -297,6 +178,7 @@ html {
 a{
     color: #66FF99;
 }
+
 a:visited{
     color: #66FF99;
 }
@@ -313,11 +195,6 @@ a:visited{
 }
 
 
-
-#tweets {
-    margin-top: 20px;
-}
-
 #courseInstructorBlock {
     height: 100%;
 }
@@ -330,6 +207,7 @@ a:visited{
 .second-btn {
     margin-left: 20px;
 }
+
 #courseRoom {
     margin-top:60px;
 }
