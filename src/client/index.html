@@ -27,7 +27,20 @@
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
         
+        <script type="text/javascript">/*<![CDATA[*/
+            var _iub = _iub || [];
+            _iub.csConfiguration = {
+                siteId: 323584, cookiePolicyId: 721019, lang: 'it'
+            };
+            (function (w, d) {
+                var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/cookie_solution/iubenda_cs.js"; tag.parentNode.insertBefore(s, tag); };
+                if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; }
+            })(window, document);
+        </script>
+        
         <script src="js/templateLoader.js"></script>
+        
+        <script src="js/facebookFeed.js"></script></script>
 
         <!-- Script to Activate the Carousel -->
         <script>
@@ -39,7 +52,15 @@
     </head>
 
     <body>
-        
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
          
         <div id="nav">
     
@@ -95,8 +116,9 @@
                         Not Just a Gym
                     </h1>
                 </div>
-             
-                <div class="col-md-12">
+            </div>
+             <div class="col-lg-8">
+                <!--<div class="col-md-12">-->
                     <div>
                      
                         <div class="panel-body">
@@ -104,9 +126,9 @@
                             </p>
                         </div>
                     </div>
-                </div>
+               <!-- </div>-->
                 
-                <div class="col-md-12 alignLeft">
+               <!-- <div class="col-md-12 alignLeft">-->
                     <div>
                         <div class="panel-body">
                                               <h3>Is there more to fitness than just working out at the gym?</h3>
@@ -115,13 +137,16 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                <!--</div>-->
                 
         
             </div>
             <!-- /.row -->
 
-
+            <div class="col-md-4">
+                <aside class="widget" id="fb-api"></aside>
+                <div class="fb-like" data-href="https://www.facebook.com/bigbiggym" data-share="true" data-width="450" data-show-faces="true" data-colorscheme="dark" data-layout="button_count" style="margin-bottom=5%;"></div>
+            </div>
             <hr>
 
             <!-- Footer -->
