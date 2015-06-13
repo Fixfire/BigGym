@@ -408,7 +408,7 @@ a > small {
     margin-top: 5%;
 }
 
-#twitter-api {
+#twitter-api, #fb-api {
     height: 200px;
     overflow-y: scroll;
 }
