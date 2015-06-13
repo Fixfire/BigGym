@@ -6,17 +6,15 @@ function documentReady(){
     $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
         FB.init({
           appId: '1677221109163837',
-        xfbml      : true,
+          xfbml      : true,
           version: 'v2.3' // or v2.0, v2.1, v2.0
         });     
         $('#loginbutton,#feedbutton').removeAttr('disabled');
     });
-
     var id=getUrlVars()["instr"];
     var from=getUrlVars()["from"];
     loadInstructor(id,from); 
 }
-
 
 function createContext(from,el,instructors){
     if(from=="month"){
@@ -60,6 +58,8 @@ function loadInstructor(id,from){
             hasAwards=result['boolean'];
             if(hasAwards){
                 $("#awardsLink").html("Personal Awards");
+            }else{
+                $("#awardsLink").hide();
             }
         1},
     });
@@ -93,7 +93,10 @@ function loadInstructor(id,from){
                 $("#teaches").attr("href","http://bigbiggym.altervista.org/client/teaches.html?instr="+instructors[i].Id+"&name="+instructors[i].Name+"&surname="+instructors[i].Surname);
                 //Fill tweets div
                 if(!instructors[i].TwitterURL==""){
-                   fillTweets(instructors[i]);
+                    fillTweets(instructors[i]);
+                    
+                }else{
+                    $('#twitter-api').hide();
                 }
             }
         1},
@@ -127,8 +130,8 @@ function fillTweets(instructor) {
     var showretweets = true;
     var showtweetlinks = true;
     var showprofilepic = true;
-	var showtweetactions = false;
-	var showretweetindicator = false;
+	//var showtweetactions = false;
+	//var showretweetindicator = false;
 	
 	var headerHTML = '';
 	var loadingHTML = '';
@@ -136,7 +139,7 @@ function fillTweets(instructor) {
 	headerHTML += '<span style="font-size:13px"><a href="https://twitter.com/'+twitterprofile+'" target="_blank">@'+twitterprofile+'</a></span></h1>';
 	loadingHTML += '<div id="loading-container"><img src="images/ajax-loader.gif" width="32" height="32" alt="tweet loader" /></div>';
 	
-	$('#twitter-feed').html(headerHTML + loadingHTML);
+	$('#twitter-api').html(headerHTML + loadingHTML);
 	 
     $.ajax({
         method: "POST",
@@ -194,12 +197,12 @@ function fillTweets(instructor) {
 						feedHTML += '<div class="twitter-pic"><a href="https://twitter.com/'+tweetusername+'" target="_blank"><img src="'+profileimage+'"images/twitter-feed-icon.png" width="42" height="42" alt="twitter icon" /></a></div>';
 						feedHTML += '<div class="twitter-text"><p><span class="tweetprofilelink"><strong><a href="https://twitter.com/'+tweetusername+'" target="_blank">'+tweetscreenname+'</a></strong> <a href="https://twitter.com/'+tweetusername+'" target="_blank">@'+tweetusername+'</a></span><span class="tweet-time"><a href="https://twitter.com/'+tweetusername+'/status/'+tweetid+'" target="_blank">'+relative_time(feeds[i].created_at)+'</a></span><br/>'+status+'</p>';
 						
-						if ((isaretweet == true) && (showretweetindicator == true)) {
+						/*if ((isaretweet == true) && (showretweetindicator == true)) {
 							feedHTML += '<div id="retweet-indicator"></div>';
 						}						
 						if (showtweetactions == true) {
 							feedHTML += '<div id="twitter-actions"><div class="intent" id="intent-reply"><a href="https://twitter.com/intent/tweet?in_reply_to='+tweetid+'" title="Reply"></a></div><div class="intent" id="intent-retweet"><a href="https://twitter.com/intent/retweet?tweet_id='+tweetid+'" title="Retweet"></a></div><div class="intent" id="intent-fave"><a href="https://twitter.com/intent/favorite?tweet_id='+tweetid+'" title="Favourite"></a></div></div>';
-						}
+						}*/
 						
 						feedHTML += '</div>';
 						feedHTML += '</div>';
@@ -211,7 +214,7 @@ function fillTweets(instructor) {
             $('#twitter-api').html(feedHTML);
 			
 			//Add twitter action animation and rollovers
-			if (showtweetactions == true) {				
+			/*if (showtweetactions == true) {				
 				$('.twitter-article').hover(function(){
 					$(this).find('#twitter-actions').css({'display':'block', 'opacity':0, 'margin-top':-20});
 					$(this).find('#twitter-actions').animate({'opacity':1, 'margin-top':0},200);
@@ -228,7 +231,7 @@ function fillTweets(instructor) {
 				  window.open(url, 'tweet action window', 'width=580,height=500');
 				  return false;
 				});
-			}
+			}*/
 			
 			
     },  
@@ -254,7 +257,7 @@ function fillTweets(instructor) {
     });
     
 
-    //Function modified from Stack Overflow
+   //Function modified from Stack Overflow
     function addlinks(data) {
         //Add link to all http:// links within tweets
          data = data.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(url) {
