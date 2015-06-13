@@ -62,7 +62,7 @@ function loadCourses(name, from){
             var el = "";
             
             for (var i=0; i<teaches.length; i++) {
-                el += "<a href='instructor.html?instr=" + teaches[i].Id + "'><img src='images/Instructors/" + teaches[i].Name + teaches[i].Surname + ".jpg' width='65' height='80' id='thunbnail' /></a>";
+                el += "<a href='instructor.html?instr=" + teaches[i].Id + "'><img class='img-hover' src='images/Instructors/" + teaches[i].Name + teaches[i].Surname + ".jpg' width='65' height='80' id='thunbnail' /></a>";
                 el += "<p>Instructors : <a href='instructor.html?instr=" + teaches[i].Id + "'> " + teaches[i].Name + " " + teaches[i].Surname + "</a></p>";
             }
             
