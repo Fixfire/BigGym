@@ -11,7 +11,7 @@
     {
         $myArray = array();//create an array
         while($row = $result->fetch_array(MYSQL_ASSOC)) {
-            $myArray[] = array_map('utf8_encode', $row);	//<----- CORRECT HERE		
+            $myArray[] = array_map('utf8_encode', $row);			
         }
         echo json_encode($myArray);
     }

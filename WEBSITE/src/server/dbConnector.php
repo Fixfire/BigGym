@@ -8,7 +8,7 @@
         exit(); //do nothing else 
     }
     else {
-        //echo "Successful connection"; // connection ok
+        echo "Successful connection"; // connection ok
     }
 
 ?>
