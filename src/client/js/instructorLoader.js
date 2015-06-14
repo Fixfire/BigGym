@@ -196,14 +196,7 @@ function fillTweets(instructor) {
 						feedHTML += '<div class="twitter-article" id="tw'+displayCounter+'">'; 										                 
 						feedHTML += '<div class="twitter-pic"><a href="https://twitter.com/'+tweetusername+'" target="_blank"><img src="'+profileimage+'"images/twitter-feed-icon.png" width="42" height="42" alt="twitter icon" /></a></div>';
 						feedHTML += '<div class="twitter-text"><p><span class="tweetprofilelink"><strong><a href="https://twitter.com/'+tweetusername+'" target="_blank">'+tweetscreenname+'</a></strong> <a href="https://twitter.com/'+tweetusername+'" target="_blank">@'+tweetusername+'</a></span><span class="tweet-time"><a href="https://twitter.com/'+tweetusername+'/status/'+tweetid+'" target="_blank">'+relative_time(feeds[i].created_at)+'</a></span><br/>'+status+'</p>';
-						
-						/*if ((isaretweet == true) && (showretweetindicator == true)) {
-							feedHTML += '<div id="retweet-indicator"></div>';
-						}						
-						if (showtweetactions == true) {
-							feedHTML += '<div id="twitter-actions"><div class="intent" id="intent-reply"><a href="https://twitter.com/intent/tweet?in_reply_to='+tweetid+'" title="Reply"></a></div><div class="intent" id="intent-retweet"><a href="https://twitter.com/intent/retweet?tweet_id='+tweetid+'" title="Retweet"></a></div><div class="intent" id="intent-fave"><a href="https://twitter.com/intent/favorite?tweet_id='+tweetid+'" title="Favourite"></a></div></div>';
-						}*/
-						
+												
 						feedHTML += '</div>';
 						feedHTML += '</div>';
 						displayCounter++;
@@ -212,28 +205,6 @@ function fillTweets(instructor) {
             }
              
             $('#twitter-api').html(feedHTML);
-			
-			//Add twitter action animation and rollovers
-			/*if (showtweetactions == true) {				
-				$('.twitter-article').hover(function(){
-					$(this).find('#twitter-actions').css({'display':'block', 'opacity':0, 'margin-top':-20});
-					$(this).find('#twitter-actions').animate({'opacity':1, 'margin-top':0},200);
-				}, function() {
-					$(this).find('#twitter-actions').animate({'opacity':0, 'margin-top':-20},120, function(){
-						$(this).css('display', 'none');
-					});
-				});			
-			
-				//Add new window for action clicks
-			
-				$('#twitter-actions a').click(function(){
-					var url = $(this).attr('href');
-				  window.open(url, 'tweet action window', 'width=580,height=500');
-				  return false;
-				});
-			}*/
-			
-			
     },  
     error: function(jqXHR, textStatus, errorThrown) {
 		var error = "";

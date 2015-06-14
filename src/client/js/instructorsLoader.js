@@ -39,7 +39,7 @@ function loadInstructors(){
                 el += "<p>" + instructors[i].Certifications + "</p>";
                 
                 //el+="<div class='instructorBtn'>";
-                el += "<button class='btn' type='button' id='std-btn'                 onclick=\"parent.location='instructor.html?instr=" + instructors[i].Id + "'\" >More Info</button>";
+                el += "<button class='btn' type='button' id='std-btn' onclick=\"parent.location='instructor.html?instr=" + instructors[i].Id + "'\" >More Info</button>";
                 el += "</div> </div>";
                 //el+="</div>";
             }
