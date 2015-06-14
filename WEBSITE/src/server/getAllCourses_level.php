@@ -1,5 +1,5 @@
 <?php
-    include 'DbConnector.php';
+    include 'dbConnector.php';
 
     # extract results mysqli_result::fetch_array
     $query = "SELECT * FROM course ORDER BY Level";

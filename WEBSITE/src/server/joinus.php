@@ -1,5 +1,5 @@
 <?php
-    include 'DbConnector.php';
+    include 'dbConnector.php';
     
     //Rtrieving POST data
     $appellative=$_POST["appellative"];
