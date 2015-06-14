@@ -7,8 +7,5 @@
         echo "Error to connect to DBMS: ".mysqli_connect_error(); //notify error
         exit(); //do nothing else 
     }
-    else {
-        echo "Successful connection"; // connection ok
-    }
 
 ?>
