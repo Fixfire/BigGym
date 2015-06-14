@@ -1,6 +1,8 @@
 $(document).ready(documentReady);
 
+//Variable that incidates what is the possible reordering.
 var ordering;
+
 function documentReady(){
     console.log("I'm ready");
     ordering = "level";
@@ -9,11 +11,12 @@ function documentReady(){
 }
 
 
+//Creates reorder link
 function createLink() {
     $("#link").html("Order by " + ordering);
 }
 
-
+//Set reordering variable and reoder the courses.
 function reorder() {
     if (ordering == "level") {
         ordering = "alphabet";
@@ -25,6 +28,7 @@ function reorder() {
     createLink();
 }
 
+// Funciton that loads all the elements of the Courses page with an alphabetic ordering.
 function loadCoursesAlphabet(){
 
     console.log("Loading courses");
@@ -33,8 +37,8 @@ function loadCoursesAlphabet(){
     
     $.ajax({
         method: "POST",
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/getAllCourses_alphabet.php", //Relative or absolute path to file.php file
+        crossDomain: true, 
+        url: "http://bigbiggym.altervista.org/server/getAllCourses_alphabet.php", 
         success: function(response) {
             console.log(JSON.parse(response));
             var courses = JSON.parse(response);
@@ -70,7 +74,7 @@ function loadCoursesAlphabet(){
             el += "</div>";
             console.log(el);
             $("#container").html(el);
-        1},
+        },
         error: function(request,error) 
         {
             console.log("Error");
@@ -78,7 +82,7 @@ function loadCoursesAlphabet(){
     });
 }
 
-
+// Funciton that loads all the elements of the Courses page with a level ordering.
 function loadCoursesLevel(){
 
     console.log("Loading courses");
@@ -87,8 +91,8 @@ function loadCoursesLevel(){
     
     $.ajax({
         method: "POST",
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/getAllCourses_level.php", //Relative or absolute path to file.php file
+        crossDomain: true, 
+        url: "http://bigbiggym.altervista.org/server/getAllCourses_level.php", 
         success: function(response) {
             console.log(JSON.parse(response));
             var courses = JSON.parse(response);

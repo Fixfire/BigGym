@@ -7,19 +7,19 @@ function documentReady(){
     loadAwards(id,name, surname); 
 }
 
-
+//Function that crates the context in the html page.
 function createContext(id,name,surname){
     var el="";
     el+=  "<a href='instructor.html?instr="+id+"'>"+name+" "+surname+"</a> <span> > </span>";
     $("#context").html(el);
 }
 
+//Function that loads all the information about awards
 function loadAwards(id,name,surname){
     $.ajax({
         method: "POST",
-        //dataType: "json", //type of data
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/getAwards.php", //Relative or absolute path to file.php file
+        crossDomain: true, 
+        url: "http://bigbiggym.altervista.org/server/getAwards.php", 
         data: {id:id},
         success: function(response) {
             console.log(JSON.parse(response));
@@ -44,7 +44,7 @@ function loadAwards(id,name,surname){
                 el+="</tr>";
             }
             $("tbody").html(el);
-        1},
+        },
     });
     
 }

@@ -7,11 +7,7 @@ function documentReady(){
 }
 
 
-function getPath(name) {
-    name = name.replace(" ", "");
-    return name;
-}
-
+// Funciton that loads all the elements of the Categories page.
 function loadCategories(){
 
     console.log("Loading categories");
@@ -20,8 +16,8 @@ function loadCategories(){
     
     $.ajax({
         method: "POST",
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/getAllCourseCategories.php", //Relative or absolute path to file.php file
+        crossDomain: true, 
+        url: "http://bigbiggym.altervista.org/server/getAllCourseCategories.php", 
         success: function(response) {
             console.log(JSON.parse(response));
             var categories = JSON.parse(response);
@@ -30,7 +26,6 @@ function loadCategories(){
                 
                 el+= "<div class=\"row\">";
             
-                
                 el += "<div class=\"col-md-7\" id=\"categoryDetail\">";
                 el += "<h3>" + categories[i].Name + "</h3>"
                 el += "<p >" + categories[i].ShortDescription + "</p>";
@@ -39,8 +34,7 @@ function loadCategories(){
                 el += "</div>";
                 el += "<div class=\"col-md-5\">";
                 el += "<a href=\"#\">";
-                var path = getPath(categories[i].Name);
-                el += "<img class=\"img-hover img-responsive\" src=\"images/" + path + "/main.jpg\"  height=\"300\" width=\"300\" >";
+                el += "<img class=\"img-hover img-responsive\" src=\"images/" + categories[i].Name + "/main.jpg\"  height=\"300\" width=\"300\" >";
                 el += "</a>";
                 el += "</div>";
                 el += "</div>";
@@ -50,7 +44,7 @@ function loadCategories(){
            
             console.log(el);
             $("#categoryList").html(el);
-        1},
+        },
         error: function(request,error) 
         {
             console.log("Error");

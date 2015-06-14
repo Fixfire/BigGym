@@ -1,11 +1,12 @@
 $(document).ready(documentReady);
 
+// Funciton that loads all the elements of the Conctact Us page.
 function documentReady(){
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/getContacts.php", //Relative or absolute path to file.php file
+        crossDomain: true, 
+        url: "http://bigbiggym.altervista.org/server/getContacts.php", 
         success: function(response) {
             console.log(JSON.parse(response));
             var contacts=JSON.parse(response);
@@ -25,6 +26,6 @@ function documentReady(){
                 el+="</tr>";
             }
             $("tbody").html(el);
-        1},
+        },
     });
 }

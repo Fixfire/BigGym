@@ -9,17 +9,18 @@ function documentReady(){
 
 
 
-
+// Funciton that loads all the elements of the Course page.
 function loadCourses(name, from){
 
     console.log("Loading course " + name.toString());
     
     document.title="Course " + name.toString();
     
+    //Load images and course description amd create the context.
     $.ajax({
         method: "POST",
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/getCourses_name.php", //Relative or absolute path to file.php file
+        crossDomain: true, 
+        url: "http://bigbiggym.altervista.org/server/getCourses_name.php", 
         data: {name:name},
         success: function(response) {
             console.log(JSON.parse(response));
@@ -50,11 +51,11 @@ function loadCourses(name, from){
     
     console.log("Loading teachers " + name.toString());
 
-    
+    //Load teachers info and links.
     $.ajax({
         method: "POST",
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/getTeaches.php", //Relative or absolute path to file.php file
+        crossDomain: true, 
+        url: "http://bigbiggym.altervista.org/server/getTeaches.php", 
         data: {name:name},
         success: function(response) {
             console.log(JSON.parse(response));
@@ -77,6 +78,7 @@ function loadCourses(name, from){
     
     console.log("Loading lessons " + name.toString());
     
+    //Load lessons information to fill the calendar.
     $.ajax({
         method: "POST",
         crossDomain: true, //localhost purposes
@@ -99,7 +101,7 @@ function loadCourses(name, from){
     });
     
     console.log("Loading guided tour " + name.toString());
-    
+    //Load courses for the guided tour.
     if (from == "all") {
          $.ajax({
             method: "POST",
@@ -178,15 +180,10 @@ function loadCourses(name, from){
         
     }
     
-    
-
-    
-    
-
 }
 
 
-
+//Function that format the data.
 function dateFormatter(lesson) {
     var start = lesson.StartingTime.toString().slice(0,2);
     var end =  lesson.EndingTime.toString().slice(0,2);

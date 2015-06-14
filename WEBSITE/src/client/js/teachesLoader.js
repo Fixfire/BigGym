@@ -7,17 +7,19 @@ function documentReady(){
     loadCoursesInstructor(id,name,surname);
 }
 
+//Create context for the html page.
 function createContext(id,name,surname){
     var el="";
     el+=  "<a href='instructor.html?instr="+id+"'>"+name+" "+surname+"</a> <span> > </span>";
     $("#context").html(el);
 }
 
+// Funciton that loads all the elements of the Teaches page.
 function loadCoursesInstructor(id,name,surname){
     $.ajax({
         method: "POST",
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/getAllCourses_instructor.php", //Relative or absolute path to file.php file
+        crossDomain: true, 
+        url: "http://bigbiggym.altervista.org/server/getAllCourses_instructor.php", 
         data: {id:id},
         success: function(response) {
             console.log(JSON.parse(response));
@@ -42,7 +44,7 @@ function loadCoursesInstructor(id,name,surname){
                 el+= "No courses";   
             }
             $("#container").html(el);
-        1},
+        },
         error: function(request,error) 
         {
             console.log("Error");

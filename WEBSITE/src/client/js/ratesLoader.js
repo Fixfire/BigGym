@@ -1,5 +1,6 @@
 $(document).ready(documentReady);
 
+// Funciton that loads all the elements of the Rates page.
 function documentReady(){
     var registration = "Registration fee(una tantum): ";
     var annual = "Fixed annual cost: ";
@@ -7,9 +8,8 @@ function documentReady(){
     
     $.ajax({
         method: "POST",
-        //dataType: "json", //type of data
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/getRates.php", //Relative or absolute path to file.php file
+        crossDomain: true,
+        url: "http://bigbiggym.altervista.org/server/getRates.php", 
         success: function(response) {
             var rates=JSON.parse(response);
            
@@ -33,7 +33,7 @@ function documentReady(){
                        break;
                }
             }
-        1},
+        },
         error: function(request,error) 
         {
             console.log("Error");

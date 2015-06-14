@@ -16,6 +16,7 @@ function documentReady(){
     loadInstructor(id,from); 
 }
 
+//Create the context in the html page.
 function createContext(from,el,instructors){
     if(from=="month"){
     el +=  "<a href='#'>Instructors of the month</a> <span> > </span>";
@@ -26,6 +27,7 @@ function createContext(from,el,instructors){
      $("#context").html(el);
 }
 
+// Funciton that loads all the elements of the Instructor page.
 function loadInstructor(id,from){
 
     var categoriesList;
@@ -33,9 +35,8 @@ function loadInstructor(id,from){
     
     $.ajax({
         method: "POST",
-        //dataType: "json", //type of data
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/getInstructorCategories.php", //Relative or absolute path to file.php file
+        crossDomain: true,
+        url: "http://bigbiggym.altervista.org/server/getInstructorCategories.php", 
         data: {id:id},
         success: function(response) {
             categoriesList=JSON.parse(response);
@@ -44,14 +45,14 @@ function loadInstructor(id,from){
                 el2+="<a href='#'>"+categoriesList[j].Category+"</a><br>";
             }
             $(".categoriesTeaching").html(el2);
-        1},
+        },
     });
     
+    //Load awards
     $.ajax({
         method: "POST",
-        //dataType: "json", //type of data
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/hasAwards.php", //Relative or absolute path to file.php file
+        crossDomain: true,
+        url: "http://bigbiggym.altervista.org/server/hasAwards.php",
         data: {id:id},
         success: function(response) {
             var result=JSON.parse(response);
@@ -61,14 +62,14 @@ function loadInstructor(id,from){
             }else{
                 $("#awardsLink").hide();
             }
-        1},
+        },
     });
     
+    //Load main instructor elements,
     $.ajax({
         method: "POST",
-        //dataType: "json", //type of data
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/getInstructor.php", //Relative or absolute path to file.php file
+        crossDomain: true, 
+        url: "http://bigbiggym.altervista.org/server/getInstructor.php", 
         data: {id:id},
         success: function(response) {
             var instructors=JSON.parse(response);
@@ -99,7 +100,7 @@ function loadInstructor(id,from){
                     $('#twitter-api').hide();
                 }
             }
-        1},
+        },
         error: function(request,error) 
         {
             console.log("Error");
@@ -125,13 +126,10 @@ function getUrlVars()
 function fillTweets(instructor) {
     var displaylimit = 4;
     var twitterprofile = instructor.TwitterURL;
-	//var screenname = instructor.Name"Michele Zanella";
-    var showdirecttweets = false;
+	var showdirecttweets = false;
     var showretweets = true;
     var showtweetlinks = true;
     var showprofilepic = true;
-	//var showtweetactions = false;
-	//var showretweetindicator = false;
 	
 	var headerHTML = '';
 	var loadingHTML = '';
@@ -143,15 +141,13 @@ function fillTweets(instructor) {
 	 
     $.ajax({
         method: "POST",
-        //dataType: "json", //type of data
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/twitterFeed.php", //Relative or absolute path to file.php file
+        crossDomain: true,
+        url: "http://bigbiggym.altervista.org/server/twitterFeed.php", 
        
         data: {twitterprofile:twitterprofile},
         success: function(response) {   
             var feeds=JSON.parse(response);
-		   //alert(feeds);
-            var feedHTML = '';
+		    var feedHTML = '';
             var displayCounter = 1;
             console.log(twitterprofile);
             console.log(feeds);
@@ -180,7 +176,7 @@ function fillTweets(instructor) {
 					 isdirect = true;
 				 }
 				 
-				//console.log(feeds[i]);
+			
 				 
 				 //Generate twitter feed HTML based on selected options
 				 if (((showretweets == true) || ((isaretweet == false) && (showretweets == false))) && ((showdirecttweets == true) || ((showdirecttweets == false) && (isdirect == false)))) { 
@@ -229,7 +225,7 @@ function fillTweets(instructor) {
     
 
    //Function modified from Stack Overflow
-    function addlinks(data) {
+   function addlinks(data) {
         //Add link to all http:// links within tweets
          data = data.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(url) {
             return '<a href="'+url+'"  target="_blank">'+url+'</a>';
@@ -267,8 +263,7 @@ function fillTweets(instructor) {
       } else if(delta < (24*60*60)) {
         return (parseInt(delta / 3600)).toString() + 'h';
       } else if(delta < (48*60*60)) {
-        //return '1 day';
-		return shortdate;
+        return shortdate;
       } else {
         return shortdate;
       }

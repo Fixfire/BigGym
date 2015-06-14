@@ -6,6 +6,7 @@ function documentReady(){
     loadCoursesCategories(category);
 }
 
+// Funciton that create the context in the html page.
 function createContext(category){
     var el="";
     el += "<a href='#'>" + category + "</a> <span> > </span>";
@@ -13,7 +14,7 @@ function createContext(category){
     $("#context").html(el);
 }
 
-
+// Funciton that loads all the elements of the Courses of Category page.
 function loadCoursesCategories(category){
 
     console.log("Loading courses " + category.toString());
@@ -22,8 +23,8 @@ function loadCoursesCategories(category){
     
     $.ajax({
         method: "POST",
-        crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/getAllCourses_category.php", //Relative or absolute path to file.php file
+        crossDomain: true, 
+        url: "http://bigbiggym.altervista.org/server/getAllCourses_category.php",
         data: {category:category},
         success: function(response) {
             console.log(JSON.parse(response));
@@ -53,7 +54,7 @@ function loadCoursesCategories(category){
             el += "</div>";
             console.log(el);
             $("#container").html(el);
-        1},
+        },
         error: function(request,error) 
         {
             console.log("Error");
