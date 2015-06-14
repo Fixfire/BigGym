@@ -90,7 +90,7 @@ function loadInstructor(id,from){
                 
                 $("#awardsLink").attr("href","awards.html?id="+instructors[i].Id+"&name="+instructors[i].Name+"&surname="+instructors[i].Surname);
                 
-                $("#teaches").attr("href","http://bigbiggym.altervista.org/client/teaches.html?instr="+instructors[i].Id+"&name="+instructors[i].Name+"&surname="+instructors[i].Surname);
+                $("#teaches").attr("href","teaches.html?instr="+instructors[i].Id+"&name="+instructors[i].Name+"&surname="+instructors[i].Surname);
                 //Fill tweets div
                 if(!instructors[i].TwitterURL==""){
                     fillTweets(instructors[i]);
