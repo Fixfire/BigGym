@@ -1,5 +1,6 @@
 <?php
    
+    header('Access-Control-Allow-Origin: *');
     //connection to db
     $mysqli = new mysqli("localhost", "bigbiggym", "", "my_bigbiggym");
 

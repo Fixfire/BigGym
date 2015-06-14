@@ -1,4 +1,6 @@
 <?php
+    header('Access-Control-Allow-Origin: *');
+
     function fetchUrl($url){
 
      $ch = curl_init();

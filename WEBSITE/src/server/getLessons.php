@@ -1,4 +1,6 @@
 <?php
+    header('Access-Control-Allow-Origin: *');
+
     include 'dbConnector.php';
 
     $course = $_POST["name"];

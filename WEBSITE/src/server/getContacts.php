@@ -1,4 +1,6 @@
 <?php
+    header('Access-Control-Allow-Origin: *');
+
     include 'dbConnector.php';
 
     # extract results mysqli_result::fetch_array
