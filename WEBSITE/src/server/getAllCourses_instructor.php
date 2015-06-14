@@ -15,6 +15,9 @@
             $myArray[] = array_map('utf8_encode', $row);	
         }
         echo json_encode($myArray);
+    }else{
+        $myArray = array();
+        echo json_encode($myArray);
     }
 
     //free result
