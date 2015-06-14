@@ -5,8 +5,6 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
         
         <title>All courses</title>
 
@@ -39,20 +37,25 @@
                 if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; }
             })(window, document);
         </script>
-        <!-- Bootstrap Core JavaScript -->
+        
+        <!-- Core Loader JavaScript -->
         <script src="js/coursesLoader.js"></script>
-
+        
+        
+        <!-- Template Loader JavaScript -->
         <script src="js/templateLoader.js"></script>
 
         
     </head>
     <body >
-         <div id="nav">
-    
-        </div>
+         <!-- Navigation Menù -->
+        <div id="nav"></div>
+
+        <!-- Header image -->
         <header>
             <img class="headerImg" src="images/courses.png"/>
         </header>
+        
         <!-- Page Content -->
         <div class="container">
             
@@ -67,6 +70,7 @@
                 </div>
             </div>
          
+            <!-- Anchor Links Section -->
             <div class="breadcrumb" id="anchor">
                 
                 <a href="#A">A</a> 
@@ -97,6 +101,7 @@
                 <a href="#Z">Z</a>
             </div>
             
+            <!-- Page Container -->
             <div id="container"></div>
             <hr>
 
