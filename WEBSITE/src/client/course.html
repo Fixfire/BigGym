@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title></title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/modern-business.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+       <!-- Local CSS references -->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        
+         <!-- Cookie Policy Script -->
+        <script type="text/javascript">/*<![CDATA[*/
+            var _iub = _iub || [];
+            _iub.csConfiguration = {
+                siteId: 323584, cookiePolicyId: 721019, lang: 'it'
+            };
+            (function (w, d) {
+                var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/cookie_solution/iubenda_cs.js"; tag.parentNode.insertBefore(s, tag); };
+                if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; }
+            })(window, document);
+        </script>
+
+        <script src="js/templateLoader.js"></script>
+
+        <script src="js/courseNameLoader.js"></script>
+    
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div id="nav">
+
+        </div>
+        <header>
+            <img class="headerImg"/>
+        </header>
+
+        <!-- Page Content -->
+        <div class="container">
+
+            <!-- Page Heading/Breadcrumbs -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="context"></div>
+                    <h1 class="page-header">
+                     
+                    </h1>
+                </div>
+            </div>
+            <!-- /.row -->
+        
+            <!-- Portfolio Item Row -->
+            <div class="row">
+
+                <div class="col-md-8" id="courseDescription">
+                    <h3>Course Description</h3>
+                    <img height="210" width="245" id='courseImage'>
+                    <p ></p>
+                </div>
+
+                <div class="col-md-4">
+                    <h3>Course Detail</h3>
+                    <div  id='calendar'>
+                        <div class="calendarRow">
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thur</div>
+                            <div>Fry</div>
+                            <div>Sat</div>  
+                            <div id="monday"></div>
+                            <div id="tuesday"></div>
+                            <div id="wednesday"></div>
+                            <div id="thursday"></div>
+                            <div id="friday"></div>
+                            <div id="saturday"></div>                  
+
+                        </div>
+                        <div id='courseRoom'>
+                            <p>Room: 
+                                <a id="roomLink" href='#'></a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <h3>Instructors</h3>
+                    <div id='courseInstructor'>
+                    </div>
+                    
+                    <a href="#"><h4>Register for this course</h4></a>
+                </div>
+
+            </div>
+            <!-- /.row -->
+
+            <!-- Related Projects Row -->
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <h3 class="page-header"></h3>
+                </div>
+
+                <div class="col-sm-3 col-xs-12">
+                    <img class="img-related"  id="courseImage1" height="140" width="260">  
+                </div>
+
+                <div class="col-sm-3 col-xs-12">
+                    <img class="img-related"  id="courseImage2" height="140" width="260">  
+                </div>
+
+                <div class="col-sm-3 col-xs-12">
+                    <img class="img-related"  id="courseImage3" height="140" width="260">  
+                </div>
+
+                <div class="col-sm-3 col-xs-12">
+                    <img class="img-related"  id="courseImage4" height="140" width="260">  
+                </div>
+
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+           <!-- Footer -->
+            <footer></footer>
+
+        </div>
+        <!-- /.container -->
+        
+        <div id='prev'>
+            <a class='glyphicon glyphicon-chevron-left indexButton' title="prev course"></a>
+        </div>
+            
+       
+            
+        <div id='next'>
+            <a class='glyphicon glyphicon-chevron-right indexButton' title="next course"></a>
+         </div>
+        
+
+        
+
+    </body>
+
+</html>

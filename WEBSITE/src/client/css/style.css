@@ -1,0 +1,437 @@
+body{
+    color: #F5F2FF;
+    background-color: #1E3D5C;
+}
+
+.dropdown-menu:nth-child(n) {
+    background-color: #222; 
+}
+
+.dropdown-menu:nth-child(n) a {
+    background-color: #222; 
+    color: #9d9d9d; 
+}
+
+.dropdown-menu li:last-child   {
+    border-bottom-color: aliceblue;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.navbar-right{
+    position: relative;
+    z-index: 1px;
+    background-color: #222;
+}
+
+
+footer {
+    font-size: 10px;
+}
+
+.submitButton {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #66FF99;
+    text-decoration: underline;
+    cursor: pointer; 
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+  width: 100%; 
+}
+
+.headerImg {
+   width: 100%;
+   max-height: 250px;
+}
+
+#courseDetail {
+    width: 230px;
+    height: 130px;
+}
+
+#courseDescription:nth-child(n) p{
+    min-height: 200px;
+}
+
+#categoryList {
+    padding-top: 10px;
+}
+
+#std-btn {
+    background-color: #222222;
+    color: white;
+}
+
+
+#std-btn:selected {
+    background-color: #222222;
+    color: white;
+}
+
+#std-btn:hover  {
+    background-color: #EEEEEE;
+    color: black;
+
+}
+
+
+
+#context {
+    padding-top: 10px;
+}
+
+#context:nth-child(n) span {
+    position:relative;
+    top: 2px;
+    font-size: 20px;    
+}
+
+
+#calendar {
+    height: 100px;
+    width: 310px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#thunbnail {
+    float: right;
+    padding-right: 10px;
+ 
+}
+
+#courseInstructor {
+    height: 200px;
+    max-width: 300px;
+}
+
+#courseInstructor:nth-child(n) p {
+    height: 100px;
+    width: 245px;
+
+}
+
+#courseImage {
+    float: left;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+#container {
+    width: 100%;
+    padding-right: 0;
+}
+
+
+
+#prev {
+    position: fixed;
+    bottom:30%;
+    font-size: 12px;
+    text-align: center;
+}
+
+#next {
+    position: fixed;
+    right: 0px;
+    bottom:30%;
+    text-align: center;
+}
+
+.indexButton {
+    margin-top: 350%;
+    font-size: 29px;
+}
+
+
+.instructorContainer {
+    height:100%;
+}
+
+.instructorPosition {
+    height: 20px;
+}
+
+.instructorName, .courseName {
+    margin-top:0px
+}
+
+.instructorBtn {
+    margin-top: 0%;
+}
+
+
+
+#map-canvas { 
+    width: 60%; 
+    height: 50%; 
+    margin-left:5%;
+}
+
+.hlink {
+    font-size: 19px;
+}
+
+#biography {
+    height: 100%;
+}
+
+a{
+    color: #66FF99;
+}
+
+a:visited{
+    color: #66FF99;
+}
+
+
+.calendarRow:nth-child(n) div {
+
+    width: 50px;
+    float: left;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    height: 22px;
+}
+
+
+#courseInstructorBlock {
+    height: 100%;
+}
+
+
+#categoryDetail {
+    min-height: 200px;
+}
+
+.second-btn {
+    margin-left: 20px;
+}
+
+#courseRoom {
+    margin-top:60px;
+}
+
+#logo {
+    position: relative;
+    bottom: 15px;
+}
+
+
+#anchor {
+    font-size: 10px;
+    padding-top: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+
+a > small {
+    font-size: 13px;
+}
+
+#courseImage1{
+    margin-top: 10px;
+}
+
+#courseImage2{
+    margin-top: 10px;
+
+}
+
+#courseImage3{
+    margin-top: 10px;
+
+}
+
+#courseImage4{
+    margin-top: 10px;
+
+}
+
+.breadcrumb {
+    background: rgba(36, 35, 35, 0.50); 
+    border: 0px solid rgba(36, 35, 35, 0.89); 
+    border-radius: 6px; 
+    display: block;
+}
+.breadcrumb li {
+    font-size: 14px;
+}
+.breadcrumb a {
+    color: #66FF99;
+}
+.breadcrumb a:hover {
+    color: #66FF99;
+}
+.breadcrumb>.active {
+    color: rgba(153, 153, 153, 1);
+}
+.breadcrumb>li+li:before {
+    color: rgba(204, 204, 204, 1); 
+    content: "\002F\00a0";
+}
+
+/*TWITTER FEED CSS STYLE*/
+#twitter-feed {
+    width:258px;
+    margin:auto;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:60px;
+    padding:8px 10px 5px 10px;
+    border-radius:12px;
+    background-color:#FFF;
+    color:#333;
+    overflow:auto;
+}
+ 
+#twitter-feed h1 {
+    color:#5F5F5F;
+    margin:0px;
+    padding:9px 0px 9px 0px;
+    font-size:18px;
+    font-weight:lighter;
+}
+ 
+.twitter-article, #loading-container {
+    width:100%;
+    border-top:1px dotted #CCC;
+    float:left;
+    padding:8px 0px 8px 0px;
+    position:relative;
+}
+.twitter-pic {
+    position:absolute;
+}
+ 
+.twitter-pic img {
+    float:left;
+    border-radius:7px;
+    border:none;
+ 
+}
+ 
+/* -------- TEXT STYLING ------*/
+.twitter-text {
+    width:100%;
+    float:left;
+    font-size:11px;
+    padding-left:52px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.twitter-text p {
+    margin:0px;
+    line-height:15px;
+}
+.twitter-text a,  h1 a {
+    color: #00acee;
+    text-decoration: none;
+}
+.twitter-text a:hover,  h1 a:hover {
+    text-decoration: underline;
+    color: #00acee;
+}
+ 
+.tweet-time {
+    font-size:10px;
+    color:#F5F2FF;
+    float:right;
+}
+.tweet-time a, .tweet-time a:hover {
+    color:#F5F2FF;
+}
+ /*
+.tweetprofilelink a {
+    color:#4;
+}
+.tweetprofilelink a:hover {
+    color:#444;
+}*/
+ 
+/* -------- FEED  ACTIONS ------*/
+#twitter-actions {
+    width:75px;
+    float:right;
+    margin-right:5px;
+    margin-top:3px;
+        display:none;
+}
+.intent {
+    width:25px;
+    height:16px;
+    float:left;
+}
+.intent a{
+    width:25px;
+    height:16px;
+    display:block;
+    background-image:url(../images/tweet-actions.png);
+    float:left;
+}
+.intent a:hover{
+    background-position:-25px 0px;
+} 
+ 
+#intent-retweet a{
+    background-position:0px -17px;
+}
+#intent-retweet a:hover{
+    background-position:-25px -17px;
+}
+#intent-fave a{
+    background-position:0px -36px;
+}
+#intent-fave a:hover{
+    background-position:-25px -36px;
+} 
+ 
+/* -------- RETWEET INDICATOR ------*/
+#retweet-indicator {
+    width:14px;
+    height:10px;
+    background-image:url(../images/tweet-actions.png);
+    background-position:-5px -54px;
+    margin-top:3px;
+    float:left;
+}
+
+.widget {
+    margin-top: 5%;
+}
+
+#twitter-api, #fb-api {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.fb-text {
+    width:100%;
+    float:left;
+    font-size:11px;
+    padding-left:0px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.fb-text p {
+    margin:0px;
+    line-height:15px;
+}
+.fb-text a,  h1 a {
+    color: #00acee;
+    text-decoration: none;
+}
+.fb-text a:hover,  h1 a:hover {
+    text-decoration: underline;
+    color: #00acee;
+}
