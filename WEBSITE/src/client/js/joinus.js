@@ -32,7 +32,7 @@ function documentReady(){
                     },
             success: function(response) {
                 alert( "Registration succeded! An email will be send when you can come to our desk office and keep your membership card" );
-                window.location.replace('http://bigbiggym.altervista.org/client/index.html');
+                window.location.replace('index.html');
             },
             error: function(request,error) 
         {
