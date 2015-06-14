@@ -1,5 +1,5 @@
 <?php
-    include 'db_connector.php';
+    include 'DbConnector.php';
 
     $id=$_POST["id"];
     # extract results mysqli_result::fetch_array

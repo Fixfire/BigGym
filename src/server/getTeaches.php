@@ -1,5 +1,5 @@
 <?php
-    include 'db_connector.php';
+    include 'DbConnector.php';
 
     $course = $_POST["name"];
    

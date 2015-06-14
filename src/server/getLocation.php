@@ -1,5 +1,5 @@
 <?php
-    include 'db_connector.php';
+    include 'DbConnector.php';
 
     # extract results mysqli_result::fetch_array
     $query = "SELECT * FROM location WHERE City='Newport News'";
