@@ -10,7 +10,7 @@ function loadInstructors(){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/GetAllInstructors.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/getAllInstructors.php", //Relative or absolute path to file.php file
         //data: {instructor:id},
         success: function(response) {
             var instructors=JSON.parse(response);

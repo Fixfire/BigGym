@@ -9,7 +9,7 @@ function documentReady(){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/GetRates.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/getRates.php", //Relative or absolute path to file.php file
         success: function(response) {
             var rates=JSON.parse(response);
            

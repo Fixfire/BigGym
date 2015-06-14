@@ -17,7 +17,7 @@ function loadCoursesInstructor(id,name,surname){
     $.ajax({
         method: "POST",
         crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/GetAllCourses_instructor.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/getAllCourses_instructor.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
             console.log(JSON.parse(response));

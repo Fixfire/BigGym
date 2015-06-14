@@ -15,7 +15,7 @@ function documentReady(){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "http://bigbiggym.altervista.org/server/FacebookFeed.php", //Relative or absolute path to file.php file
+        url: "http://bigbiggym.altervista.org/server/facebookFeed.php", //Relative or absolute path to file.php file
        
         success: function(response) { 
             console.log(JSON.parse(response));
