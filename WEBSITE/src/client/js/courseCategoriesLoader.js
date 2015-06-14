@@ -6,10 +6,10 @@ function documentReady(){
     loadCoursesCategories(category);
 }
 
-function createContext(courses){
+function createContext(category){
     var el="";
-    el += "<a href='#'>" + courses[0].Category + "</a> <span> > </span>";
-    el += "<h3 class='page-header'>" + courses[0].Category + " Course</h3>";
+    el += "<a href='#'>" + category + "</a> <span> > </span>";
+    el += "<h3 class='page-header'>" + category + " Course</h3>";
     $("#context").html(el);
 }
 
@@ -30,21 +30,25 @@ function loadCoursesCategories(category){
             var courses = JSON.parse(response);
             var el = "";
             
-            createContext(courses);
+            createContext(category);
             
             el += "<div class='row'>";
-            for (var i=0; i<courses.length; i++) {
-               
-                console.log(courses[i].Name);
-                
-                el += "<div class='col-md-4'>";
-                el += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
-                el += "<h3>" + courses[i].Name + "</h3>";
-                el += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
-                el += "<p>Category: " + courses[i].Category + "</p>";
-                el += "<p>Level: " + courses[i].Level + "</p>";
-                el += "<button class='btn' type='button' id='std-btn' onclick=\"parent.location='course.html?name=" + courses[i].Name + "&from=" + courses[i].Category + "'\">More Info</button>";
-                el += "</div>";
+            if(courses.length>0){
+                for (var i=0; i<courses.length; i++) {
+
+                    console.log(courses[i].Name);
+
+                    el += "<div class='col-md-4'>";
+                    el += "<img src='images/" + courses[i].Name  + "/main.png' height='200' width='230' />";
+                    el += "<h3>" + courses[i].Name + "</h3>";
+                    el += "<p id='courseDetail'>" + courses[i].ShortDescription + "</p>";
+                    el += "<p>Category: " + courses[i].Category + "</p>";
+                    el += "<p>Level: " + courses[i].Level + "</p>";
+                    el += "<button class='btn' type='button' id='std-btn' onclick=\"parent.location='course.html?name=" + courses[i].Name + "&from=" + courses[i].Category + "'\">More Info</button>";
+                    el += "</div>";
+                }
+            }else{
+                el += "No courses";
             }
             el += "</div>";
             console.log(el);

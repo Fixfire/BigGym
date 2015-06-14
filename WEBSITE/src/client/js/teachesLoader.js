@@ -25,19 +25,22 @@ function loadCoursesInstructor(id,name,surname){
             var el = "";
       
             createContext(id,name,surname);
-            for (var i=0; i<courses.length; i++) {
-                document.title="Courses of "+name+" "+surname;
-                console.log(courses[i].Name);
-                
-                el += "<div class='col-md-6' id='courseInstructorBlock'>";
-                el += "<img src='images/" +  courses[i].Name+"/main.png' height='100' width='115' style='float:left; margin-right: 5%'/>";
-                el+= "<div class='courseContainer'>";
-                el += "<h3 class='courseName'>" + courses[i].Name+"</h3>";
-                el += "<p class='courseLevel'>Level: " + courses[i].Level + "</p>";
-                el += "<button class='btn' type='button' id='std-btn' onclick=\"parent.location='course.html?name=" + courses[i].Name + "&from=all'\" >More Info</button>";
-                el += "</div> </div>";
+            if(courses.length>0){
+                for (var i=0; i<courses.length; i++) {
+                    document.title="Courses of "+name+" "+surname;
+                    console.log(courses[i].Name);
+
+                    el += "<div class='col-md-6' id='courseInstructorBlock'>";
+                    el += "<img src='images/" +  courses[i].Name+"/main.png' height='100' width='115' style='float:left; margin-right: 5%'/>";
+                    el+= "<div class='courseContainer'>";
+                    el += "<h3 class='courseName'>" + courses[i].Name+"</h3>";
+                    el += "<p class='courseLevel'>Level: " + courses[i].Level + "</p>";
+                    el += "<button class='btn' type='button' id='std-btn' onclick=\"parent.location='course.html?name=" + courses[i].Name + "&from=all'\" >More Info</button>";
+                    el += "</div> </div>";
+                }
+            }else{
+                el+= "No courses";   
             }
-            console.log(el);
             $("#container").html(el);
         1},
         error: function(request,error) 
