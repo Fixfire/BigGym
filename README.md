@@ -15,7 +15,11 @@ By Claudio Sanna & Michele Zanella
 
 *Facebook SDK for JavaScript with jQuery V 2.3;
 
+*Facebook Graph API PHP call;
+
 *Twitter REST APIs V1.1;
+
+*Twitter's OAuth API by Abraham Williams https://wiki.github.com/abraham/twitteroauth;
 
 *--------------------------------------------------------------------------------*
 
